@@ -5,12 +5,12 @@
 #include <cmath>
 
 const char windowName[] = "Q6";
-int windowWidth = 500;
-int windowHeight = 500;
+int windowWidth = 1000;
+int windowHeight = 800;
 float aspect = 1;
 float angle = 0;
 GLfloat mat[4];
-Robot robot;
+Robot *robot;
 
 void SetLightSource()
 {
@@ -18,8 +18,8 @@ void SetLightSource()
 	glEnable(GL_LIGHT0);
 
 	//point light
-	GLfloat lightPosition[] = {1.0f, 1.0f, -1.0f, 1.0f};
-	GLfloat lightAmbient[] = { 0.2f, 0.2f, 0.2f, 1.0f };
+	GLfloat lightPosition[] = { -1.0f, 1.0f, 1.0f, 0.0f };
+	GLfloat lightAmbient[] = { 0.5f, 0.5f, 0.5f, 0.5f };
 	GLfloat lightDiffuse[] = { 1.0f, 1.0f, 1.0f, 1.0f };
 	GLfloat lightSpecular[] = { 1.0f, 1.0f, 1.0f, 1.0f };
 
@@ -61,33 +61,10 @@ void SetMaterial()
 	glMaterialf(GL_FRONT, GL_SHININESS, shininess);
 }
 
-void SetRubyMaterial()
-{
-	GLfloat matAmbient[] = { 0.1745,0.01175,0.01175, 1.0f };
-	GLfloat matDiffuse[] = { 0.61424,0.04136,0.04136, 1.0f };
-	GLfloat matSpecular[] = { 0.727811,0.626959,0.626959, 1.0f };
-	GLfloat shininess =0.6* 128.0f;
-	glMaterialfv(GL_FRONT, GL_AMBIENT, matAmbient);
-	glMaterialfv(GL_FRONT, GL_DIFFUSE, matDiffuse);
-	glMaterialfv(GL_FRONT, GL_SPECULAR, matSpecular);
-	glMaterialf(GL_FRONT, GL_SHININESS, shininess);
-}
 
-void SetBrassMaterial()
-{
-	GLfloat matAmbient[] = { 0.329412,0.223529,0.027451, 1.0f };
-	GLfloat matDiffuse[] = { 0.780392,0.568627,0.113725, 1.0f };
-	GLfloat matSpecular[] = { 0.992157,0.941176,0.807843, 1.0f };
-	GLfloat shininess = 0.21794872f* 128.0f;
-	glMaterialfv(GL_FRONT, GL_AMBIENT, matAmbient);
-	glMaterialfv(GL_FRONT, GL_DIFFUSE, matDiffuse);
-	glMaterialfv(GL_FRONT, GL_SPECULAR, matSpecular);
-	glMaterialf(GL_FRONT, GL_SHININESS, shininess);
-}
 
 void SetEmeraldMaterial()
 {
-	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	mat[0] = 0.0215;
 	mat[1] = 0.1745;
 	mat[2] = 0.0215;
@@ -121,27 +98,15 @@ void InitOpenGL()
 
 void display()
 {
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-	SetEmeraldMaterial();
 	glPushMatrix();
-	glTranslatef(0, 0, -0.5);
-	glRotatef(angle, 0, 1, 0);
-	glutSolidSphere(0.3, 50, 50);
+	glTranslatef(0, -1.5, -15);
+	robot->drawRobot(angle);
 	glPopMatrix();
 
-	SetBrassMaterial();
-	glPushMatrix();
-	glTranslatef(0.5, 0.5, -1.5);
-	glRotatef(angle, 0, 1, 0);
-	glutSolidTeapot(0.3);
-	glPopMatrix();
-
-	SetRubyMaterial();
-	glPushMatrix();
-	glTranslatef(-0.5, 0.5, -1);
-	glRotatef(angle, 0, 1, 0);
-	glutSolidTeapot(0.2);
-	glPopMatrix();
+	
+	
 
 	glutSwapBuffers();
 }
@@ -188,7 +153,7 @@ int main(int argc, char* argv[])
 	glutCreateWindow(windowName);
 
 	InitOpenGL();
-
+	robot = new Robot();
 	glutDisplayFunc(display);
 	glutReshapeFunc(reshape);
 	glutTimerFunc(16, timer, 0);
