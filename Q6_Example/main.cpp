@@ -102,6 +102,8 @@ void display()
 
 	glPushMatrix();
 	glTranslatef(0, -1.5, -15);
+	glRotatef(-45, 0, 1, 0);
+	glScalef(2, 2, 2);
 	robot->drawRobot(angle);
 	glPopMatrix();
 
@@ -148,7 +150,7 @@ int main(int argc, char* argv[])
 {
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_RGBA | GLUT_DEPTH | GLUT_DOUBLE | GLUT_MULTISAMPLE); //GLUT_MULTISAMPLE anti-aliasing
-	glutInitWindowPosition(500, 300);
+	glutInitWindowPosition(200, 200);
 	glutInitWindowSize(windowWidth, windowHeight);
 	glutCreateWindow(windowName);
 

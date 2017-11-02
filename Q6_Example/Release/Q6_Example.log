@@ -1,21 +1,30 @@
 ﻿  Robot.cpp
-Robot.cpp(72): warning C4838: conversion from 'double' to 'GLfloat' requires a narrowing conversion
-Robot.cpp(72): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
-Robot.cpp(73): warning C4838: conversion from 'double' to 'GLfloat' requires a narrowing conversion
-Robot.cpp(73): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
-Robot.cpp(74): warning C4838: conversion from 'double' to 'GLfloat' requires a narrowing conversion
-Robot.cpp(74): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
-Robot.cpp(75): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
-Robot.cpp(84): warning C4838: conversion from 'double' to 'GLfloat' requires a narrowing conversion
-Robot.cpp(84): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
-Robot.cpp(85): warning C4838: conversion from 'double' to 'GLfloat' requires a narrowing conversion
-Robot.cpp(85): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
-Robot.cpp(86): warning C4838: conversion from 'double' to 'GLfloat' requires a narrowing conversion
-Robot.cpp(86): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+Robot.cpp(59): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(64): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(83): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(87): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(90): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(92): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(99): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(102): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(104): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(135): warning C4838: conversion from 'double' to 'GLfloat' requires a narrowing conversion
+Robot.cpp(135): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+Robot.cpp(136): warning C4838: conversion from 'double' to 'GLfloat' requires a narrowing conversion
+Robot.cpp(136): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+Robot.cpp(137): warning C4838: conversion from 'double' to 'GLfloat' requires a narrowing conversion
+Robot.cpp(137): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+Robot.cpp(138): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+Robot.cpp(147): warning C4838: conversion from 'double' to 'GLfloat' requires a narrowing conversion
+Robot.cpp(147): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+Robot.cpp(148): warning C4838: conversion from 'double' to 'GLfloat' requires a narrowing conversion
+Robot.cpp(148): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+Robot.cpp(149): warning C4838: conversion from 'double' to 'GLfloat' requires a narrowing conversion
+Robot.cpp(149): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
   Generating code
-  6 of 16 functions (37.5%) were compiled, the rest were copied from previous compilation.
+  2 of 17 functions (11.8%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+    1 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   Q6_Example.vcxproj -> C:\Users\Tom Chiang\Downloads\Q6_Example\Release\Q6_Example.exe
   Q6_Example.vcxproj -> C:\Users\Tom Chiang\Downloads\Q6_Example\Release\Q6_Example.pdb (Full PDB)

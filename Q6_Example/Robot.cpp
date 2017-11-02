@@ -19,13 +19,13 @@ void Robot::drawRobot(float angle)
 	glPushMatrix();
 	glTranslatef(-1, 0, 0);
 	SetBrassMaterial();
-	drawLeftHand();
+	drawLeftArm();
 	glPopMatrix();
 
 	glPushMatrix();
-	glTranslatef(1, 0, 0);
+	glTranslatef(1, 2, 0);
 	SetBrassMaterial();
-	drawRightHand();
+	drawRightArm();
 	glPopMatrix();
 }
 
@@ -41,18 +41,81 @@ void Robot::drawBody(float angle)
 
 	glPushMatrix();
 	glTranslatef(0, 3, 0);
+	glRotatef(-90, 0, 1, 0);
 	SetBrassMaterial();
 	glutSolidTeapot(1);
 	glPopMatrix();
 
 }
 
+void Robot::drawRightArm()
+{
+
+	glPushMatrix();
+	gluSphere(qobj, 0.2, 10, 10);
+	glRotatef(50, 1, 0, 0);
+	glRotatef(15, 0, 1, 0);
+	gluCylinder(qobj, 0.1, 0.1, 1, 20, 20);
+	glTranslatef(0, 0, 1.2);
+	gluSphere(qobj, 0.2, 10, 10);
+	glRotatef(-15, 0, 1, 0);
+	glRotatef(-60, 1, 0, 0);
+	gluCylinder(qobj, 0.1, 0.1, 1, 20, 20);
+	glTranslatef(0, 0, 1.2);
+	drawRightHand();
+	glPopMatrix();
+
+	glPushMatrix();
+	/*glRotatef()
+	gluCylinder(qobj, 0.1, 0.1, 1, 20, 20);*/
+	glPopMatrix();
+
+	glPushMatrix();
+	glRotatef(30, 1, 0, 0);
+	
+	//gluCylinder(qobj, 0.1, 0.1, 1, 20, 20);
+	glPopMatrix();
+}
+
 void Robot::drawRightHand()
+{
+	glPushMatrix();
+	glScalef(1, 1.3, 1);
+	gluSphere(qobj, 0.2, 10, 10);
+
+	glPushMatrix(); //thumb
+	glTranslatef(0, 0.18, 0);
+	glRotatef(-80, 1, 0, 0);
+	gluCylinder(qobj, 0.05, 0.05, 0.1, 20, 20);
+	glTranslatef(0, 0.0, 0.13);
+	gluSphere(qobj, 0.05, 10, 10);
+	glTranslatef(0, 0.0, 0.04);
+	glRotatef(20, 1, 0, 0);
+	glRotatef(40, 0, 0, 1);
+	gluCylinder(qobj, 0.05, 0.05, 0.08, 20, 20);
+	glPopMatrix();
+
+	glPushMatrix(); //index
+	glTranslatef(0, 0.18, 0);
+	glRotatef(-80, 1, 0, 0);
+	gluCylinder(qobj, 0.05, 0.05, 0.1, 20, 20);
+	glTranslatef(0, 0.0, 0.13);
+	gluSphere(qobj, 0.05, 10, 10);
+	glTranslatef(0, 0.0, 0.04);
+	glRotatef(20, 1, 0, 0);
+	glRotatef(40, 0, 0, 1);
+	gluCylinder(qobj, 0.05, 0.05, 0.08, 20, 20);
+	glPopMatrix();
+
+	glPopMatrix();
+}
+
+void Robot::drawLeftHand()
 {
 
 }
 
-void Robot::drawLeftHand()
+void Robot::drawLeftArm()
 {
 
 }

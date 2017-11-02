@@ -12,6 +12,8 @@ private:
 	int bodysize = 0;
 	GLUquadric* qobj;
 	void drawBody(float angle);
+	void drawRightArm();
+	void drawLeftArm();
 	void drawRightHand();
 	void drawLeftHand();
 	void drawRightLeg();
