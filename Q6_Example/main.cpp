@@ -3,6 +3,7 @@
 #include "Robot.h"
 #include <cstdio>
 #include <cmath>
+#include <vector>
 
 const char windowName[] = "Q6";
 int windowWidth = 1000;
@@ -14,6 +15,10 @@ Robot *robot;
 
 void SetLightSource()
 {
+
+	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+	//glEnable(GL_COLOR_MATERIAL);
+
 	glEnable(GL_LIGHTING);
 	glEnable(GL_LIGHT0);
 
@@ -99,10 +104,11 @@ void InitOpenGL()
 void display()
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
+	glShadeModel(GL_SMOOTH);
+	glEnable(GL_BLEND);
 	glPushMatrix();
 	glTranslatef(0, -1.5, -15);
-	glRotatef(-45, 0, 1, 0);
+	glRotatef(-40, 0, 1, 0);
 	glScalef(2, 2, 2);
 	robot->drawRobot(angle);
 	glPopMatrix();

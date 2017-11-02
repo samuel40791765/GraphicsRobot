@@ -1,6 +1,9 @@
 #pragma once
+#include <vector>
 #include <GL/freeglut.h>
 #include <GL/freeglut_ext.h>
+#include "Pnt3f.H"
+#include <math.h>
 
 class Robot
 {
@@ -20,5 +23,6 @@ private:
 	void drawLeftLeg();
 	void SetRubyMaterial();
 	void SetBrassMaterial();
+	void roundRect(Pnt3f pnt, float height, float width, float lgth, float curve);
 };
 

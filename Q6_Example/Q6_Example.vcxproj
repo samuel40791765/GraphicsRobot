@@ -122,9 +122,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Pnt3f.cpp" />
     <ClCompile Include="Robot.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Pnt3f.H" />
     <ClInclude Include="Robot.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
