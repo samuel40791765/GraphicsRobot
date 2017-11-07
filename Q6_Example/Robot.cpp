@@ -5,6 +5,16 @@
 Robot::Robot()
 {
 	qobj = gluNewQuadric();
+	right_bicep_xangle = 90;
+	left_bicep_xangle = 90;
+	right_arm_xangle = -30;
+	left_arm_xangle = -30;
+	right_big_legxangle = 0;
+	left_big_legxangle = 0;
+	right_small_legxangle = 0;
+	left_small_legxangle = 0;
+	right_finger_angle = 0;
+	left_fingerangle = 0;
 }
 
 
@@ -17,14 +27,14 @@ void Robot::drawRobot(float angle)
 	drawBody(angle);
 
 	glPushMatrix();
-	glTranslatef(-1, 1.5, 0);
-	SetBrassMaterial();
+	glTranslatef(-1.15, 1.65, 0);
+	Material::SetBrassMaterial();
 	drawLeftArm();
 	glPopMatrix();
 
 	glPushMatrix();
-	glTranslatef(1, 1.5, 0);
-	SetBrassMaterial();
+	glTranslatef(1.15, 1.65, 0);
+	Material::SetBrassMaterial();
 	drawRightArm();
 	glPopMatrix();
 }
@@ -35,35 +45,59 @@ void Robot::drawBody(float angle)
 	glPushMatrix();
 	//glRotatef(angle, 0, 1, 0);
 	glRotatef(0, 1, 0, 0);
-	SetRubyMaterial();
-	roundRect(Pnt3f(1, 2, 1), 2, 2, 2, 0.1);
+	Material::SetWhiteMaterial();
+	roundRect(Pnt3f(0.7, 1.8, 0.7), 1.7, 1.7, 1.7, 0.3);
 	glPopMatrix();
 
 	glPushMatrix();//drawHead
 	//glTranslatef(0.5, 3, 0);
 	//glRotatef(-70, 1, 0, 0);
-	SetBrassMaterial();
+	Material::SetWhiteMaterial();
 	//gluCylinder(qobj, 0.1, 0.1, 2.5, 4, 4);
-	roundRect(Pnt3f(0.5, 3, 0.5), 1, 1, 1, 0.3);
-	//glutSolidTeapot(1);
+	roundRect(Pnt3f(0.5, 2.7, 0.5), 0.2, 1, 1, 0.5);
+
+	Material::SetBlackMaterial();
+	glTranslatef(0, 2.6, 0.9);
+	glScalef(2.3, 1.35, 1);
+	gluSphere(qobj, 0.3, 30, 30);
 	glPopMatrix();
 
+	Material::SetCyanMaterial();
+	glPushMatrix();
+	glTranslatef(-0.38, 2.6, 1.13);
+	glScalef(1.3, 1.75, 1);
+	gluSphere(qobj, 0.1, 30, 30);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(0.38, 2.6, 1.13);
+	glScalef(1.3, 1.75, 1);
+	gluSphere(qobj, 0.1, 30, 30);
+	glPopMatrix();
+
+	
 }
 
 void Robot::drawRightArm()
 {
 
+	glRotatef(right_bicep_xangle, 1, 0, 0);
 	glPushMatrix();
-	gluSphere(qobj, 0.2, 10, 10);
-	glRotatef(50, 1, 0, 0);
+	Material::SetWhiteMaterial();
+	glPushMatrix();
+	glScalef(1.5, 1, 1);
+	gluSphere(qobj, 0.25, 10, 10);
+	glPopMatrix();
 	glRotatef(15, 0, 1, 0);
+	Material::SetBlackMaterial();
 	gluCylinder(qobj, 0.1, 0.1, 1, 20, 20);
-	glTranslatef(0, 0, 1.2);
+	glTranslatef(0, 0, 1);
+	Material::SetWhiteMaterial();
 	gluSphere(qobj, 0.2, 10, 10);
 	glRotatef(-15, 0, 1, 0);
-	glRotatef(-60, 1, 0, 0);
-	gluCylinder(qobj, 0.1, 0.1, 1, 20, 20);
-	glTranslatef(0, 0, 1.2);
+	glRotatef(right_arm_xangle, 1, 0, 0);
+	gluCylinder(qobj, 0.1, 0.25, 1, 20, 20);
+	glTranslatef(0, 0, 1);
 	drawRightHand();
 	glPopMatrix();
 
@@ -81,10 +115,12 @@ void Robot::drawRightArm()
 
 void Robot::drawRightHand()
 {
+	Material::SetWhiteMaterial();
 	glPushMatrix();
 	glScalef(1, 1.3, 1);
 	gluSphere(qobj, 0.2, 10, 10);
 
+	Material::SetBlackMaterial();
 	glPushMatrix(); //thumb
 	glTranslatef(0, 0.18, 0);
 	glRotatef(-80, 1, 0, 0);
@@ -153,10 +189,12 @@ void Robot::drawRightHand()
 
 void Robot::drawLeftHand()
 {
+	Material::SetWhiteMaterial();
 	glPushMatrix();
 	glScalef(1, 1.3, 1);
 	gluSphere(qobj, 0.2, 10, 10);
 
+	Material::SetBlackMaterial();
 	glPushMatrix(); //thumb
 	glTranslatef(0, 0.18, 0);
 	glRotatef(-80, 1, 0, 0);
@@ -225,17 +263,23 @@ void Robot::drawLeftHand()
 
 void Robot::drawLeftArm()
 {
+	glRotatef(left_bicep_xangle, 1, 0, 0);
 	glPushMatrix();
+	Material::SetWhiteMaterial();
+	glPushMatrix();
+	glScalef(1.5, 1, 1);
 	gluSphere(qobj, 0.2, 10, 10);
-	glRotatef(50, 1, 0, 0);
+	glPopMatrix();
 	glRotatef(-15, 0, 1, 0);
+	Material::SetBlackMaterial();
 	gluCylinder(qobj, 0.1, 0.1, 1, 20, 20);
 	glTranslatef(0, 0, 1.2);
+	Material::SetWhiteMaterial();
 	gluSphere(qobj, 0.2, 10, 10);
 	glRotatef(15, 0, 1, 0);
-	glRotatef(-60, 1, 0, 0);
-	gluCylinder(qobj, 0.1, 0.1, 1, 20, 20);
-	glTranslatef(0, 0, 1.2);
+	glRotatef(left_arm_xangle, 1, 0, 0);
+	gluCylinder(qobj, 0.1, 0.25, 1, 20, 20);
+	glTranslatef(0, 0, 1);
 	drawLeftHand();
 	glPopMatrix();
 
@@ -261,96 +305,71 @@ void Robot::drawLeftLeg()
 
 }
 
-void Robot::SetRubyMaterial()
-{
-	
-	GLfloat matAmbient[] = { 0.1745,0.01175,0.01175, 1.0f };
-	GLfloat matDiffuse[] = { 0.61424,0.04136,0.04136, 1.0f };
-	GLfloat matSpecular[] = { 0.727811,0.626959,0.626959, 1.0f };
-	GLfloat shininess = 0.6* 128.0f;
-	glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, matAmbient);
-	glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, matDiffuse);
-	glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, matSpecular);
-	glMaterialf(GL_FRONT_AND_BACK, GL_SHININESS, shininess);
-
-	
-}
-
-void Robot::SetBrassMaterial()
-{
-	GLfloat matAmbient[] = { 0.329412,0.223529,0.027451, 1.0f };
-	GLfloat matDiffuse[] = { 0.780392,0.568627,0.113725, 1.0f };
-	GLfloat matSpecular[] = { 0.992157,0.941176,0.807843, 1.0f };
-	GLfloat shininess = 0.21794872f* 128.0f;
-	glMaterialfv(GL_FRONT, GL_AMBIENT, matAmbient);
-	glMaterialfv(GL_FRONT, GL_DIFFUSE, matDiffuse);
-	glMaterialfv(GL_FRONT, GL_SPECULAR, matSpecular);
-	glMaterialf(GL_FRONT, GL_SHININESS, shininess);
-}
 
 void Robot::roundRect(Pnt3f pnt,float height, float width, float lgth, float curve) {
+	glPushMatrix();
 	glTranslatef(pnt.x, pnt.y, pnt.z);
 	//draw spheres
 	glPushMatrix();
-	gluSphere(qobj, curve, 30, 30);
+	gluSphere(qobj, curve, 50, 50);
 	glRotatef(90, 1, 0, 0);
-	gluCylinder(qobj, curve, curve, height, 30, 30);
+	gluCylinder(qobj, curve, curve, height, 50, 50);
 	glRotatef(-90, 1, 0, 0);
 
 	glTranslatef(-width, 0, 0);
-	gluSphere(qobj, curve, 30, 30);
+	gluSphere(qobj, curve, 50, 50);
 	glRotatef(90, 1, 0, 0);
-	gluCylinder(qobj, curve, curve, height, 30, 30);
+	gluCylinder(qobj, curve, curve, height, 50, 50);
 	glRotatef(-90, 1, 0, 0);
 
 	glTranslatef(0, -height, 0);
-	gluSphere(qobj, curve, 30, 30);
+	gluSphere(qobj, curve, 50, 50);
 	glTranslatef(width, 0, 0);
-	gluSphere(qobj, curve, 30, 30);
+	gluSphere(qobj, curve, 50, 50);
 	glTranslatef(0, 0, -lgth);
-	gluSphere(qobj, curve, 30, 30);
+	gluSphere(qobj, curve, 50, 50);
 	glTranslatef(-width, 0, 0);
-	gluSphere(qobj, curve, 30, 30);
+	gluSphere(qobj, curve, 50, 50);
 	glTranslatef(0, height, 0);
-	gluSphere(qobj, curve, 30, 30);
+	gluSphere(qobj, curve, 50, 50);
 	glRotatef(90, 1, 0, 0);
-	gluCylinder(qobj, curve, curve, height, 30, 30);
+	gluCylinder(qobj, curve, curve, height, 50, 50);
 	glRotatef(-90, 1, 0, 0);
 	glTranslatef(width, 0, 0);
-	gluSphere(qobj, curve, 30, 30);
+	gluSphere(qobj, curve, 50, 50);
 	glRotatef(90, 1, 0, 0);
-	gluCylinder(qobj, curve, curve, height, 30, 30);
+	gluCylinder(qobj, curve, curve, height, 50, 50);
 	glRotatef(-90, 1, 0, 0);
 	glPopMatrix();
 
 	//draw edges
 	glPushMatrix();
 	glRotatef(180, 0, 1, 0);
-	gluCylinder(qobj, curve, curve,lgth, 30, 30);
+	gluCylinder(qobj, curve, curve,lgth, 50, 50);
 	glRotatef(90, 0, 1, 0);
-	gluCylinder(qobj, curve, curve, width, 30, 30);
+	gluCylinder(qobj, curve, curve, width, 50, 50);
 	glPopMatrix();
 
 	glPushMatrix();
 	glTranslatef(-width, 0, -lgth);
-	gluCylinder(qobj, curve, curve, lgth, 30, 30);
+	gluCylinder(qobj, curve, curve, lgth, 50, 50);
 	glRotatef(90, 0, 1, 0);
-	gluCylinder(qobj, curve, curve, width, 30, 30);
+	gluCylinder(qobj, curve, curve, width, 50, 50);
 	glPopMatrix();
 
 	glPushMatrix();
 	glTranslatef(0, -height, 0);
 	glRotatef(180, 0, 1, 0);
-	gluCylinder(qobj, curve, curve, lgth, 30, 30);
+	gluCylinder(qobj, curve, curve, lgth, 50, 50);
 	glRotatef(90, 0, 1, 0);
-	gluCylinder(qobj, curve, curve, width, 30, 30);
+	gluCylinder(qobj, curve, curve, width, 50, 50);
 	glPopMatrix();
 
 	glPushMatrix();
 	glTranslatef(-width, -height, -lgth);
-	gluCylinder(qobj, curve, curve, lgth, 30, 30);
+	gluCylinder(qobj, curve, curve, lgth, 50, 50);
 	glRotatef(90, 0, 1, 0);
-	gluCylinder(qobj, curve, curve, width, 30, 30);
+	gluCylinder(qobj, curve, curve, width, 50, 50);
 	glPopMatrix();
 
 	//faces
@@ -393,5 +412,24 @@ void Robot::roundRect(Pnt3f pnt,float height, float width, float lgth, float cur
 	
 	
 	glEnd(); 
-	
+	glPopMatrix();
+}
+
+void Robot::walk() {
+	if (armswing) {
+		if (right_bicep_xangle > 60)
+			right_bicep_xangle--;
+		if (left_bicep_xangle < 120)
+			left_bicep_xangle++;
+		if (right_bicep_xangle <= 60 || left_bicep_xangle >= 120)
+			armswing = false;
+	}
+	else {
+		if (left_bicep_xangle > 60)
+			left_bicep_xangle--;
+		if (right_bicep_xangle < 120)
+			right_bicep_xangle++;
+		if (left_bicep_xangle <= 60 || right_bicep_xangle >= 120)
+			armswing = true;
+	}
 }

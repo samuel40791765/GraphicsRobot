@@ -24,12 +24,18 @@
     <ClCompile Include="Pnt3f.cpp">
       <Filter>原始程式檔</Filter>
     </ClCompile>
+    <ClCompile Include="Material.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Robot.h">
       <Filter>標頭檔</Filter>
     </ClInclude>
     <ClInclude Include="Pnt3f.H">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="Material.h">
       <Filter>標頭檔</Filter>
     </ClInclude>
   </ItemGroup>

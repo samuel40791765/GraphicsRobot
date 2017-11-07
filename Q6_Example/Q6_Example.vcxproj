@@ -122,10 +122,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Material.cpp" />
     <ClCompile Include="Pnt3f.cpp" />
     <ClCompile Include="Robot.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Material.h" />
     <ClInclude Include="Pnt3f.H" />
     <ClInclude Include="Robot.h" />
   </ItemGroup>
