@@ -24,6 +24,8 @@ Robot::~Robot()
 
 void Robot::drawRobot(float angle)
 {
+	//glRotatef(-90, 1, 0, 0);
+	//glRotatef(-90, 0, 1, 0);
 	drawBody(angle);
 
 	glPushMatrix();
@@ -36,6 +38,16 @@ void Robot::drawRobot(float angle)
 	glTranslatef(1.15, 1.65, 0);
 	Material::SetBrassMaterial();
 	drawRightArm();
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(-0.7, 0, 0);
+	drawLeftLeg();
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(0.7, 0, 0);
+	drawLeftLeg();
 	glPopMatrix();
 }
 
@@ -297,12 +309,37 @@ void Robot::drawLeftArm()
 
 void Robot::drawRightLeg()
 {
+	glPushMatrix();
+	glScalef(1, 1.3, 1);
+	gluSphere(qobj, 0.2, 10, 10);
+
+	glRotatef(90, 1, 0, 0);
+	gluCylinder(qobj, 0.1, 0.1, 0.7, 20, 20);
+	glTranslatef(0, 0, 0.7);
+	gluSphere(qobj, 0.2, 10, 10);
+	glTranslatef(-0.2, -0.2, -0.3);
+	roundRect(Pnt3f(0.5, 1, 0.5), 1.0, 0.5, 0.05, 0.1);
+
+
+	glPopMatrix();
 
 }
 
 void Robot::drawLeftLeg()
 {
+	glPushMatrix();
+	glScalef(1, 1.3, 1);
+	gluSphere(qobj, 0.2, 10, 10);
 
+	glRotatef(90, 1, 0, 0);
+	gluCylinder(qobj, 0.1, 0.1, 0.7, 20, 20);
+	glTranslatef(0, 0, 0.7);
+	gluSphere(qobj, 0.2, 10, 10);
+	glTranslatef(-0.2, -0.2, -0.3);
+	roundRect(Pnt3f(0.5, 1, 0.5), 1.0, 0.5, 0.05, 0.1);
+
+
+	glPopMatrix();
 }
 
 
