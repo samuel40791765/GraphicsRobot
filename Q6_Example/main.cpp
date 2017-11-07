@@ -221,7 +221,7 @@ void display()
 	glEnable(GL_BLEND);
 	glPushMatrix();
 	glTranslatef(0, -1.5, -15);
-	glRotatef(-40, 0, 1, 0);
+	glRotatef(-40, 0,1, 0);
 	glScalef(2, 2, 2);
 	//drawSkybox(50.0f);
 	robot->drawRobot(angle);
@@ -262,7 +262,7 @@ void reshape(int width, int height)
 void timer(int value)
 {
 	glutPostRedisplay();
-	angle++;
+	robot->walk();
 	glutTimerFunc(16, timer, 0);
 }
 

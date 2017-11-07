@@ -1,93 +1,100 @@
 ﻿  main.cpp
-E:\GraphicsRobot\FreeImage\Dist\x32\FreeImage.h : warning C4819: 檔案含有無法在目前字碼頁 (950) 中表示的字元。請以 Unicode 格式儲存檔案以防止資料遺失
-main.cpp(186): warning C4305: '=': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-main.cpp(187): warning C4305: '=': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-main.cpp(188): warning C4305: '=': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-main.cpp(191): warning C4305: '=': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-main.cpp(192): warning C4305: '=': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-main.cpp(193): warning C4305: '=': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-main.cpp(195): warning C4305: '=': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-main.cpp(196): warning C4305: '=': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-main.cpp(197): warning C4305: '=': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-main.cpp(199): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-main.cpp(279): warning C4101: 'mtexture': 未參考的區域變數
+main.cpp(186): warning C4305: '=': truncation from 'double' to 'GLfloat'
+main.cpp(187): warning C4305: '=': truncation from 'double' to 'GLfloat'
+main.cpp(188): warning C4305: '=': truncation from 'double' to 'GLfloat'
+main.cpp(191): warning C4305: '=': truncation from 'double' to 'GLfloat'
+main.cpp(192): warning C4305: '=': truncation from 'double' to 'GLfloat'
+main.cpp(193): warning C4305: '=': truncation from 'double' to 'GLfloat'
+main.cpp(195): warning C4305: '=': truncation from 'double' to 'GLfloat'
+main.cpp(196): warning C4305: '=': truncation from 'double' to 'GLfloat'
+main.cpp(197): warning C4305: '=': truncation from 'double' to 'GLfloat'
+main.cpp(199): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+main.cpp(279): warning C4101: 'mtexture': unreferenced local variable
+  Material.cpp
+Material.cpp(18): warning C4838: conversion from 'double' to 'GLfloat' requires a narrowing conversion
+Material.cpp(18): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+Material.cpp(19): warning C4838: conversion from 'double' to 'GLfloat' requires a narrowing conversion
+Material.cpp(19): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+Material.cpp(20): warning C4838: conversion from 'double' to 'GLfloat' requires a narrowing conversion
+Material.cpp(20): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+Material.cpp(21): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+Material.cpp(56): warning C4838: conversion from 'double' to 'GLfloat' requires a narrowing conversion
+Material.cpp(56): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+Material.cpp(57): warning C4838: conversion from 'double' to 'GLfloat' requires a narrowing conversion
+Material.cpp(57): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+Material.cpp(58): warning C4838: conversion from 'double' to 'GLfloat' requires a narrowing conversion
+Material.cpp(58): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
   Pnt3f.cpp
-Pnt3f.cpp(78): warning C4244: '=': 將 'double' 轉換為 'float'，由於類型不同，可能導致資料遺失
+Pnt3f.cpp(78): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
   Robot.cpp
-Robot.cpp(34): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(40): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(53): warning C4305: '引數': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(61): warning C4305: '引數': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(75): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(80): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(99): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(103): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(106): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(108): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(115): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(118): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(120): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(123): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(128): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(130): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(132): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(135): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(140): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(143): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(145): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(148): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(153): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(156): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(158): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(161): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(171): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(175): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(178): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(180): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(187): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(190): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(192): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(195): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(200): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(202): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(204): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(207): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(212): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(215): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(217): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(220): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(225): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(228): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(230): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(233): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(247): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(252): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(271): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(276): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(278): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(279): warning C4305: '引數': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(289): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(294): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(296): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(297): warning C4305: '引數': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(306): warning C4838: 從 'double' 到 'GLfloat' 的轉換必須是縮小轉換
-Robot.cpp(306): warning C4305: '正在初始化': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(307): warning C4838: 從 'double' 到 'GLfloat' 的轉換必須是縮小轉換
-Robot.cpp(307): warning C4305: '正在初始化': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(308): warning C4838: 從 'double' 到 'GLfloat' 的轉換必須是縮小轉換
-Robot.cpp(308): warning C4305: '正在初始化': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(309): warning C4305: '正在初始化': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(320): warning C4838: 從 'double' 到 'GLfloat' 的轉換必須是縮小轉換
-Robot.cpp(320): warning C4305: '正在初始化': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(321): warning C4838: 從 'double' 到 'GLfloat' 的轉換必須是縮小轉換
-Robot.cpp(321): warning C4305: '正在初始化': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(322): warning C4838: 從 'double' 到 'GLfloat' 的轉換必須是縮小轉換
-Robot.cpp(322): warning C4305: '正在初始化': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(38): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(44): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(49): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(61): warning C4305: 'argument': truncation from 'double' to 'const float'
+Robot.cpp(61): warning C4305: 'argument': truncation from 'double' to 'float'
+Robot.cpp(69): warning C4305: 'argument': truncation from 'double' to 'const float'
+Robot.cpp(69): warning C4305: 'argument': truncation from 'double' to 'float'
+Robot.cpp(72): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(73): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(79): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(80): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(85): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(86): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(132): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(137): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(140): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(142): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(149): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(152): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(154): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(157): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(162): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(164): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(166): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(169): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(174): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(177): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(179): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(182): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(187): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(190): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(192): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(195): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(206): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(211): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(214): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(216): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(223): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(226): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(228): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(231): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(236): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(238): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(240): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(243): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(248): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(251): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(253): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(256): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(261): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(264): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(266): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(269): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(288): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(313): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(318): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(320): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(321): warning C4305: 'argument': truncation from 'double' to 'float'
+Robot.cpp(331): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(336): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(338): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(339): warning C4305: 'argument': truncation from 'double' to 'float'
   texture.cpp
   TextureApp.cpp
   TextureManager.cpp
-E:\GraphicsRobot\FreeImage\Dist\x32\FreeImage.h : warning C4819: 檔案含有無法在目前字碼頁 (950) 中表示的字元。請以 Unicode 格式儲存檔案以防止資料遺失
-  正在產生程式碼
+  Generating code
   All 181 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
-  已完成程式碼產生
-  Q6_Example.vcxproj -> E:\GraphicsRobot\Release\Q6_Example.exe
+  Finished generating code
+  Q6_Example.vcxproj -> C:\Users\Tom Chiang\Downloads\Q6_Example\Release\Q6_Example.exe
+  Q6_Example.vcxproj -> C:\Users\Tom Chiang\Downloads\Q6_Example\Release\Q6_Example.pdb (Full PDB)

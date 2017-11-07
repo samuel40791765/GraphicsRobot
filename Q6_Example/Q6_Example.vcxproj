@@ -21,19 +21,19 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{DBC611E6-3753-44E5-AA0E-F28650681784}</ProjectGuid>
     <RootNamespace>Q6_Example</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -73,8 +73,8 @@
     <LibraryPath>E:\GraphicsRobot\SDL2-2.0.7\lib;../freeglut-3.0.0/lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>E:\GraphicsRobot\FreeImage\Dist\x32;../freeglut-3.0.0/include;$(IncludePath)</IncludePath>
-    <LibraryPath>E:\GraphicsRobot\FreeImage\Dist\x32;../freeglut-3.0.0/lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>../freeglut-3.0.0/include;../FreeImage/Dist/x32;$(IncludePath)</IncludePath>
+    <LibraryPath>../FreeImage/Dist/x32;../freeglut-3.0.0/lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -123,6 +123,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Material.cpp" />
     <ClCompile Include="Pnt3f.cpp" />
     <ClCompile Include="Robot.cpp" />
     <ClCompile Include="texture.cpp" />
@@ -131,6 +132,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common_header.h" />
+    <ClInclude Include="Material.h" />
     <ClInclude Include="Pnt3f.H" />
     <ClInclude Include="Robot.h" />
     <ClInclude Include="texture.h" />
