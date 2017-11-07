@@ -1,0 +1,13 @@
+﻿  main.cpp
+e:\graphicsrobot\q6_example\main.cpp(185): warning C4305: '=': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+e:\graphicsrobot\q6_example\main.cpp(186): warning C4305: '=': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+e:\graphicsrobot\q6_example\main.cpp(187): warning C4305: '=': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+e:\graphicsrobot\q6_example\main.cpp(190): warning C4305: '=': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+e:\graphicsrobot\q6_example\main.cpp(191): warning C4305: '=': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+e:\graphicsrobot\q6_example\main.cpp(192): warning C4305: '=': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+e:\graphicsrobot\q6_example\main.cpp(194): warning C4305: '=': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+e:\graphicsrobot\q6_example\main.cpp(195): warning C4305: '=': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+e:\graphicsrobot\q6_example\main.cpp(196): warning C4305: '=': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+e:\graphicsrobot\q6_example\main.cpp(198): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+     正在建立程式庫 E:\GraphicsRobot\Debug\Q6_Example.lib 和物件 E:\GraphicsRobot\Debug\Q6_Example.exp
+LINK : fatal error LNK1561: 必須定義進入點

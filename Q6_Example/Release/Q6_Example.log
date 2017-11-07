@@ -1,67 +1,19 @@
-﻿  Robot.cpp
-Robot.cpp(39): warning C4305: 'argument': truncation from 'double' to 'float'
-Robot.cpp(47): warning C4305: 'argument': truncation from 'double' to 'float'
-Robot.cpp(61): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-Robot.cpp(66): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-Robot.cpp(85): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-Robot.cpp(89): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-Robot.cpp(92): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-Robot.cpp(94): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-Robot.cpp(101): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-Robot.cpp(104): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-Robot.cpp(106): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-Robot.cpp(109): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-Robot.cpp(114): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-Robot.cpp(116): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-Robot.cpp(118): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-Robot.cpp(121): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-Robot.cpp(126): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-Robot.cpp(129): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-Robot.cpp(131): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-Robot.cpp(134): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-Robot.cpp(139): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-Robot.cpp(142): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-Robot.cpp(144): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-Robot.cpp(147): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-Robot.cpp(157): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-Robot.cpp(161): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-Robot.cpp(164): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-Robot.cpp(166): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-Robot.cpp(173): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-Robot.cpp(176): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-Robot.cpp(178): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-Robot.cpp(181): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-Robot.cpp(186): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-Robot.cpp(188): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-Robot.cpp(190): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-Robot.cpp(193): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-Robot.cpp(198): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-Robot.cpp(201): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-Robot.cpp(203): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-Robot.cpp(206): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-Robot.cpp(211): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-Robot.cpp(214): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-Robot.cpp(216): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-Robot.cpp(219): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-Robot.cpp(233): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-Robot.cpp(238): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-Robot.cpp(267): warning C4838: conversion from 'double' to 'GLfloat' requires a narrowing conversion
-Robot.cpp(267): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
-Robot.cpp(268): warning C4838: conversion from 'double' to 'GLfloat' requires a narrowing conversion
-Robot.cpp(268): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
-Robot.cpp(269): warning C4838: conversion from 'double' to 'GLfloat' requires a narrowing conversion
-Robot.cpp(269): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
-Robot.cpp(270): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
-Robot.cpp(281): warning C4838: conversion from 'double' to 'GLfloat' requires a narrowing conversion
-Robot.cpp(281): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
-Robot.cpp(282): warning C4838: conversion from 'double' to 'GLfloat' requires a narrowing conversion
-Robot.cpp(282): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
-Robot.cpp(283): warning C4838: conversion from 'double' to 'GLfloat' requires a narrowing conversion
-Robot.cpp(283): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
-  Generating code
-  1 of 20 functions ( 5.0%) were compiled, the rest were copied from previous compilation.
+﻿  main.cpp
+E:\GraphicsRobot\FreeImage\Dist\x32\FreeImage.h : warning C4819: 檔案含有無法在目前字碼頁 (950) 中表示的字元。請以 Unicode 格式儲存檔案以防止資料遺失
+main.cpp(186): warning C4305: '=': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+main.cpp(187): warning C4305: '=': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+main.cpp(188): warning C4305: '=': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+main.cpp(191): warning C4305: '=': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+main.cpp(192): warning C4305: '=': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+main.cpp(193): warning C4305: '=': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+main.cpp(195): warning C4305: '=': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+main.cpp(196): warning C4305: '=': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+main.cpp(197): warning C4305: '=': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+main.cpp(199): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+main.cpp(279): warning C4101: 'mtexture': 未參考的區域變數
+  正在產生程式碼
+  1 of 181 functions ( 0.6%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
-  Finished generating code
-  Q6_Example.vcxproj -> C:\Users\Tom Chiang\Downloads\Q6_Example\Release\Q6_Example.exe
-  Q6_Example.vcxproj -> C:\Users\Tom Chiang\Downloads\Q6_Example\Release\Q6_Example.pdb (Full PDB)
+    0 functions had inline decision re-evaluated but remain unchanged
+  已完成程式碼產生
+  Q6_Example.vcxproj -> E:\GraphicsRobot\Release\Q6_Example.exe
