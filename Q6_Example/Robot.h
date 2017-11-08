@@ -11,7 +11,7 @@ class Robot
 public:
 	Robot();
 	~Robot();
-	void drawRobot(float angle);
+	void drawRobot();
 	void walk();
 	void clenchfist();
 private:
@@ -26,7 +26,7 @@ private:
 	bool armswing,legwalk;
 	bool fist;
 	GLUquadric* qobj;
-	void drawBody(float angle);
+	void drawBody();
 	void drawRightArm();
 	void drawLeftArm();
 	void drawRightHand();

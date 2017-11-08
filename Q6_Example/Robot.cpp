@@ -28,11 +28,11 @@ Robot::~Robot()
 {
 }
 
-void Robot::drawRobot(float angle)
+void Robot::drawRobot()
 {
 	//glRotatef(-90, 1, 0, 0);
 	//glRotatef(-90, 0, 1, 0);
-	drawBody(angle);
+	drawBody();
 
 	glPushMatrix();
 	glTranslatef(-1.25, 1.65, 0);
@@ -55,7 +55,7 @@ void Robot::drawRobot(float angle)
 	glPopMatrix();
 }
 
-void Robot::drawBody(float angle)
+void Robot::drawBody()
 {
 
 	glPushMatrix();

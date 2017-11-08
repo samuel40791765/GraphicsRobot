@@ -1,16 +1,38 @@
 #include <GL/freeglut.h>
 #include <GL/freeglut_ext.h>
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
 #include "Robot.h"
 #include <cstdio>
 #include <cmath>
 #include <vector>
 #include "TextureApp.h"
+#define PUNCH 2
+#define WALK 1
+#define IDLE 0
+using namespace glm;
+
+mat4 Projection;
+mat4 View;
+float position = 0.0;
+float eyeAngley = 0.0;
+float eyedistance = 20.0;
+int mode;
+int action;
+bool isFrame;
+void ChangeSize(int w, int h);
+void display();
+void Keyboard(unsigned char key, int x, int y);
+void Mouse(int button, int state, int x, int y);
+void menuEvents(int option);
+void ActionMenuEvents(int option);
+
 
 const char windowName[] = "Q6";
 int windowWidth = 1000;
 int windowHeight = 800;
 float aspect = 1;
-float angle = 0;
+float angle = 320;
 GLfloat mat[4];
 Robot *robot;
 enum { SKY_LEFT = 0, SKY_BACK, SKY_RIGHT, SKY_FRONT, SKY_TOP, SKY_BOTTOM };
@@ -199,22 +221,33 @@ void InitOpenGL()
 	//clear color and depth
 	glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
 	glClearDepth(1.0f);
+
+
 }
 
 void display()
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	float eyey = eyeAngley*3.1415 / 180;
+	glMatrixMode(GL_MODELVIEW);
+	glLoadIdentity();
+	gluLookAt(
+		eyedistance*sin(eyey), 0, eyedistance*cos(eyey), //eye(camera) position
+		0.0f, 0.0f, 0.0f, //look direction
+		0.0f, 1.0f, 0.0f);
+
 	glShadeModel(GL_SMOOTH);
 	glEnable(GL_BLEND);
 	drawSkybox(100);
 	glPushMatrix();
 	glTranslatef(0, -1.5, -15);
-	glRotatef(-40, 0,1, 0);
+	glRotatef(angle, 0, 1, 0);
 	glScalef(2, 2, 2);
 	//drawSkybox(50.0f);
-	robot->drawRobot(angle);
+	robot->drawRobot();
 	glPopMatrix();
 
+	glFlush();
 	glutSwapBuffers();
 }
 
@@ -238,8 +271,9 @@ void reshape(int width, int height)
 	//set view matrix
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
+	float eyey = eyeAngley*3.1415 / 180;
 	gluLookAt(
-		0.0f, 0.0f, 1.0f, //eye(camera) position
+		0, 0, 1, //eye(camera) position
 		0.0f, 0.0f, 0.0f, //look direction
 		0.0f, 1.0f, 0.0f);//up direction
 }
@@ -247,8 +281,17 @@ void reshape(int width, int height)
 void timer(int value)
 {
 	glutPostRedisplay();
-	robot->walk();
-	robot->clenchfist();
+	switch (action) {
+	case IDLE:
+		break;
+	case WALK:
+		robot->walk();
+		break;
+	case PUNCH:
+		robot->clenchfist();
+		break;
+	}
+
 	glutTimerFunc(16, timer, 0);
 }
 
@@ -259,8 +302,21 @@ int main(int argc, char* argv[])
 	glutInitWindowPosition(200, 200);
 	glutInitWindowSize(windowWidth, windowHeight);
 	glutCreateWindow(windowName);
-
+	isFrame = false;
 	InitOpenGL();
+	glutReshapeFunc(ChangeSize);
+	glutKeyboardFunc(Keyboard);
+	int ActionMenu;
+	ActionMenu = glutCreateMenu(ActionMenuEvents);
+	glutAddMenuEntry("idle", 0);
+	glutAddMenuEntry("walk", 1);
+	glutAddMenuEntry("punch", 2);
+	glutAttachMenu(GLUT_RIGHT_BUTTON);
+	glutCreateMenu(menuEvents);
+	glutAddSubMenu("action", ActionMenu);
+	glutAttachMenu(GLUT_RIGHT_BUTTON);
+	glutMouseFunc(Mouse);
+
 	robot = new Robot();	
 	glutDisplayFunc(display);
 	glutReshapeFunc(reshape);
@@ -271,3 +327,63 @@ int main(int argc, char* argv[])
 
 	return 0;
 }
+
+void Keyboard(unsigned char key, int x, int y) {
+	switch (key) {
+	case '1':
+		break;
+	case '2':
+		break;
+	case 'w':
+		if (eyedistance > 1)
+			eyedistance -= 0.2;
+		break;
+	case 's':
+		if (eyedistance <= 30)
+			eyedistance += 0.2;
+		break;
+	case 'a':
+		if (eyeAngley <= 10)
+			eyeAngley += 1;
+		break;
+	case 'd':
+		if (eyeAngley >= -10)
+			eyeAngley -= 1;
+		break;
+	case 'q':
+		angle -= 5;
+		if (angle <= 0) angle = 360;
+		break;
+	case 'e':
+		angle += 5;
+		if (angle >= 360) angle = 0;
+		break;
+	}
+	glutPostRedisplay();
+}
+
+void ActionMenuEvents(int option) {
+	switch (option) {
+	case 0:
+		action = IDLE;
+		break;
+	case 1:
+		action = WALK;
+		break;
+	case 2:
+		action = PUNCH;
+		break;
+	}
+}
+void ChangeSize(int w, int h) {
+	if (h == 0) h = 1;
+	glViewport(0, 0, w, h);
+	Projection = glm::perspective(80.0f, (float)w / h, 0.1f, 100.0f);
+}
+
+void Mouse(int button, int state, int x, int y) {
+	if (button == 2) isFrame = false;
+}
+
+void menuEvents(int option) {};
+void ModeMenuEvents(int option);
