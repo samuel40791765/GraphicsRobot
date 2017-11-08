@@ -73,8 +73,8 @@
     <LibraryPath>E:\GraphicsRobot\SDL2-2.0.7\lib;../freeglut-3.0.0/lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>../freeglut-3.0.0/include;$(IncludePath)</IncludePath>
-    <LibraryPath>../freeglut-3.0.0/lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>../;../freeglut-3.0.0/include;$(IncludePath)</IncludePath>
+    <LibraryPath>../lib;../freeglut-3.0.0/lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

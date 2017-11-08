@@ -1,19 +1,23 @@
 ﻿  main.cpp
-main.cpp(173): warning C4305: '=': truncation from 'double' to 'GLfloat'
-main.cpp(174): warning C4305: '=': truncation from 'double' to 'GLfloat'
-main.cpp(175): warning C4305: '=': truncation from 'double' to 'GLfloat'
-main.cpp(178): warning C4305: '=': truncation from 'double' to 'GLfloat'
-main.cpp(179): warning C4305: '=': truncation from 'double' to 'GLfloat'
-main.cpp(180): warning C4305: '=': truncation from 'double' to 'GLfloat'
-main.cpp(182): warning C4305: '=': truncation from 'double' to 'GLfloat'
-main.cpp(183): warning C4305: '=': truncation from 'double' to 'GLfloat'
-main.cpp(184): warning C4305: '=': truncation from 'double' to 'GLfloat'
-main.cpp(186): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+main.cpp(195): warning C4305: '=': truncation from 'double' to 'GLfloat'
+main.cpp(196): warning C4305: '=': truncation from 'double' to 'GLfloat'
+main.cpp(197): warning C4305: '=': truncation from 'double' to 'GLfloat'
+main.cpp(200): warning C4305: '=': truncation from 'double' to 'GLfloat'
+main.cpp(201): warning C4305: '=': truncation from 'double' to 'GLfloat'
+main.cpp(202): warning C4305: '=': truncation from 'double' to 'GLfloat'
+main.cpp(204): warning C4305: '=': truncation from 'double' to 'GLfloat'
+main.cpp(205): warning C4305: '=': truncation from 'double' to 'GLfloat'
+main.cpp(206): warning C4305: '=': truncation from 'double' to 'GLfloat'
+main.cpp(208): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+main.cpp(231): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+main.cpp(274): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+main.cpp(339): warning C4305: '-=': truncation from 'double' to 'float'
+main.cpp(343): warning C4305: '+=': truncation from 'double' to 'float'
 LINK : warning LNK4098: defaultlib 'LIBCMTD' conflicts with use of other libs; use /NODEFAULTLIB:library
   Generating code
-  2 of 224 functions ( 0.9%) were compiled, the rest were copied from previous compilation.
+  5 of 254 functions ( 2.0%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+    1 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
 zlibd.lib(adler32.obj) : warning LNK4099: PDB 'zlib.pdb' was not found with 'zlibd.lib(adler32.obj)' or at 'C:\Users\Tom Chiang\Downloads\Q6_Example\Release\zlib.pdb'; linking object as if no debug info
 zlibd.lib(crc32.obj) : warning LNK4099: PDB 'zlib.pdb' was not found with 'zlibd.lib(crc32.obj)' or at 'C:\Users\Tom Chiang\Downloads\Q6_Example\Release\zlib.pdb'; linking object as if no debug info
