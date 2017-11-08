@@ -74,3 +74,15 @@ void Material::SetCyanMaterial()
 	glMaterialfv(GL_FRONT, GL_SPECULAR, matSpecular);
 	glMaterialf(GL_FRONT, GL_SHININESS, shininess);
 }
+
+void Material::SetTurqoiseMaterial()
+{
+	GLfloat matAmbient[] = { 0.1f, 0.18725f, 0.1745f, 0.8f };
+	GLfloat matDiffuse[] = { 0.396f, 0.74151f, 0.69102f, 0.8f };
+	GLfloat matSpecular[] = { 0.297254f, 0.30829f, 0.306678f, 0.8f };
+	GLfloat shininess = 12.8f;
+	glMaterialfv(GL_FRONT, GL_AMBIENT, matAmbient);
+	glMaterialfv(GL_FRONT, GL_DIFFUSE, matDiffuse);
+	glMaterialfv(GL_FRONT, GL_SPECULAR, matSpecular);
+	glMaterialf(GL_FRONT, GL_SHININESS, shininess);
+}

@@ -215,9 +215,6 @@ void display()
 	robot->drawRobot(angle);
 	glPopMatrix();
 
-	
-	
-
 	glutSwapBuffers();
 }
 
@@ -251,6 +248,7 @@ void timer(int value)
 {
 	glutPostRedisplay();
 	robot->walk();
+	robot->clenchfist();
 	glutTimerFunc(16, timer, 0);
 }
 
