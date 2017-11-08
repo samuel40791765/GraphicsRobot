@@ -5,18 +5,13 @@
     <ClCompile Include="Material.cpp" />
     <ClCompile Include="Pnt3f.cpp" />
     <ClCompile Include="Robot.cpp" />
-    <ClCompile Include="texture.cpp" />
     <ClCompile Include="TextureApp.cpp" />
-    <ClCompile Include="TextureManager.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="common_header.h" />
     <ClInclude Include="Material.h" />
     <ClInclude Include="Pnt3f.H" />
     <ClInclude Include="Robot.h" />
-    <ClInclude Include="texture.h" />
     <ClInclude Include="TextureApp.h" />
-    <ClInclude Include="TextureManager.h" />
     <ClInclude Include="vgl.h" />
   </ItemGroup>
 </Project>

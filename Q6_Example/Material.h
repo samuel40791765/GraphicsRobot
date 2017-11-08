@@ -10,6 +10,7 @@ public:
 	static void SetWhiteMaterial();
 	static void SetBlackMaterial();
 	static void SetCyanMaterial();
+	static void SetTurqoiseMaterial();
 	Material();
 	~Material();
 };

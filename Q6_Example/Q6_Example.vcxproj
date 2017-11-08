@@ -73,8 +73,8 @@
     <LibraryPath>E:\GraphicsRobot\SDL2-2.0.7\lib;../freeglut-3.0.0/lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>../freeglut-3.0.0/include;../FreeImage/Dist/x32;$(IncludePath)</IncludePath>
-    <LibraryPath>../FreeImage/Dist/x32;../freeglut-3.0.0/lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>../freeglut-3.0.0/include;$(IncludePath)</IncludePath>
+    <LibraryPath>../freeglut-3.0.0/lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -96,7 +96,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <Optimization>MaxSpeed</Optimization>
+      <Optimization>Disabled</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
@@ -105,7 +105,7 @@
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>freeglut.lib;FreeImage.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>freeglut.lib;zlibd.lib;libpng16d.lib;opencv_core2413d.lib;opencv_highgui2413d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -126,18 +126,13 @@
     <ClCompile Include="Material.cpp" />
     <ClCompile Include="Pnt3f.cpp" />
     <ClCompile Include="Robot.cpp" />
-    <ClCompile Include="texture.cpp" />
     <ClCompile Include="TextureApp.cpp" />
-    <ClCompile Include="TextureManager.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="common_header.h" />
     <ClInclude Include="Material.h" />
     <ClInclude Include="Pnt3f.H" />
     <ClInclude Include="Robot.h" />
-    <ClInclude Include="texture.h" />
     <ClInclude Include="TextureApp.h" />
-    <ClInclude Include="TextureManager.h" />
     <ClInclude Include="vgl.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
