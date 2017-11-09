@@ -1,45 +1,47 @@
 ﻿  main.cpp
-main.cpp(195): warning C4305: '=': truncation from 'double' to 'GLfloat'
-main.cpp(196): warning C4305: '=': truncation from 'double' to 'GLfloat'
-main.cpp(197): warning C4305: '=': truncation from 'double' to 'GLfloat'
-main.cpp(200): warning C4305: '=': truncation from 'double' to 'GLfloat'
-main.cpp(201): warning C4305: '=': truncation from 'double' to 'GLfloat'
-main.cpp(202): warning C4305: '=': truncation from 'double' to 'GLfloat'
-main.cpp(204): warning C4305: '=': truncation from 'double' to 'GLfloat'
-main.cpp(205): warning C4305: '=': truncation from 'double' to 'GLfloat'
-main.cpp(206): warning C4305: '=': truncation from 'double' to 'GLfloat'
-main.cpp(208): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-main.cpp(231): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-main.cpp(274): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-main.cpp(339): warning C4305: '-=': truncation from 'double' to 'float'
-main.cpp(343): warning C4305: '+=': truncation from 'double' to 'float'
-LINK : warning LNK4098: defaultlib 'LIBCMTD' conflicts with use of other libs; use /NODEFAULTLIB:library
-  Generating code
-  5 of 254 functions ( 2.0%) were compiled, the rest were copied from previous compilation.
+d:\graphicsrobot\freeglut-3.0.0\include\opencv2\flann\dist.h : warning C4819: 檔案含有無法在目前字碼頁 (950) 中表示的字元。請以 Unicode 格式儲存檔案以防止資料遺失
+D:\GraphicsRobot\freeglut-3.0.0\include\opencv2/legacy/compat.hpp : warning C4819: 檔案含有無法在目前字碼頁 (950) 中表示的字元。請以 Unicode 格式儲存檔案以防止資料遺失
+main.cpp(195): warning C4305: '=': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+main.cpp(196): warning C4305: '=': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+main.cpp(197): warning C4305: '=': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+main.cpp(200): warning C4305: '=': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+main.cpp(201): warning C4305: '=': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+main.cpp(202): warning C4305: '=': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+main.cpp(204): warning C4305: '=': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+main.cpp(205): warning C4305: '=': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+main.cpp(206): warning C4305: '=': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+main.cpp(208): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+main.cpp(231): warning C4244: '正在初始化': 將 'double' 轉換為 'float'，由於類型不同，可能導致資料遺失
+main.cpp(274): warning C4244: '正在初始化': 將 'double' 轉換為 'float'，由於類型不同，可能導致資料遺失
+main.cpp(339): warning C4305: '-=': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+main.cpp(343): warning C4305: '+=': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+LINK : warning LNK4098: 預設的程式庫 'LIBCMTD' 與其他使用的程式庫衝突，請使用 /NODEFAULTLIB:library
+  正在產生程式碼
+  1 of 254 functions ( 0.4%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     1 functions had inline decision re-evaluated but remain unchanged
-  Finished generating code
-zlibd.lib(adler32.obj) : warning LNK4099: PDB 'zlib.pdb' was not found with 'zlibd.lib(adler32.obj)' or at 'C:\Users\Tom Chiang\Downloads\Q6_Example\Release\zlib.pdb'; linking object as if no debug info
-zlibd.lib(crc32.obj) : warning LNK4099: PDB 'zlib.pdb' was not found with 'zlibd.lib(crc32.obj)' or at 'C:\Users\Tom Chiang\Downloads\Q6_Example\Release\zlib.pdb'; linking object as if no debug info
-zlibd.lib(deflate.obj) : warning LNK4099: PDB 'zlib.pdb' was not found with 'zlibd.lib(deflate.obj)' or at 'C:\Users\Tom Chiang\Downloads\Q6_Example\Release\zlib.pdb'; linking object as if no debug info
-zlibd.lib(inffast.obj) : warning LNK4099: PDB 'zlib.pdb' was not found with 'zlibd.lib(inffast.obj)' or at 'C:\Users\Tom Chiang\Downloads\Q6_Example\Release\zlib.pdb'; linking object as if no debug info
-zlibd.lib(inflate.obj) : warning LNK4099: PDB 'zlib.pdb' was not found with 'zlibd.lib(inflate.obj)' or at 'C:\Users\Tom Chiang\Downloads\Q6_Example\Release\zlib.pdb'; linking object as if no debug info
-zlibd.lib(inftrees.obj) : warning LNK4099: PDB 'zlib.pdb' was not found with 'zlibd.lib(inftrees.obj)' or at 'C:\Users\Tom Chiang\Downloads\Q6_Example\Release\zlib.pdb'; linking object as if no debug info
-zlibd.lib(trees.obj) : warning LNK4099: PDB 'zlib.pdb' was not found with 'zlibd.lib(trees.obj)' or at 'C:\Users\Tom Chiang\Downloads\Q6_Example\Release\zlib.pdb'; linking object as if no debug info
-zlibd.lib(zutil.obj) : warning LNK4099: PDB 'zlib.pdb' was not found with 'zlibd.lib(zutil.obj)' or at 'C:\Users\Tom Chiang\Downloads\Q6_Example\Release\zlib.pdb'; linking object as if no debug info
-libpng16d.lib(png.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng16d.lib(png.obj)' or at 'C:\Users\Tom Chiang\Downloads\Q6_Example\Release\libpng.pdb'; linking object as if no debug info
-libpng16d.lib(pngerror.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng16d.lib(pngerror.obj)' or at 'C:\Users\Tom Chiang\Downloads\Q6_Example\Release\libpng.pdb'; linking object as if no debug info
-libpng16d.lib(pngget.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng16d.lib(pngget.obj)' or at 'C:\Users\Tom Chiang\Downloads\Q6_Example\Release\libpng.pdb'; linking object as if no debug info
-libpng16d.lib(pngmem.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng16d.lib(pngmem.obj)' or at 'C:\Users\Tom Chiang\Downloads\Q6_Example\Release\libpng.pdb'; linking object as if no debug info
-libpng16d.lib(pngread.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng16d.lib(pngread.obj)' or at 'C:\Users\Tom Chiang\Downloads\Q6_Example\Release\libpng.pdb'; linking object as if no debug info
-libpng16d.lib(pngrio.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng16d.lib(pngrio.obj)' or at 'C:\Users\Tom Chiang\Downloads\Q6_Example\Release\libpng.pdb'; linking object as if no debug info
-libpng16d.lib(pngrtran.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng16d.lib(pngrtran.obj)' or at 'C:\Users\Tom Chiang\Downloads\Q6_Example\Release\libpng.pdb'; linking object as if no debug info
-libpng16d.lib(pngrutil.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng16d.lib(pngrutil.obj)' or at 'C:\Users\Tom Chiang\Downloads\Q6_Example\Release\libpng.pdb'; linking object as if no debug info
-libpng16d.lib(pngset.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng16d.lib(pngset.obj)' or at 'C:\Users\Tom Chiang\Downloads\Q6_Example\Release\libpng.pdb'; linking object as if no debug info
-libpng16d.lib(pngtrans.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng16d.lib(pngtrans.obj)' or at 'C:\Users\Tom Chiang\Downloads\Q6_Example\Release\libpng.pdb'; linking object as if no debug info
-libpng16d.lib(pngwio.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng16d.lib(pngwio.obj)' or at 'C:\Users\Tom Chiang\Downloads\Q6_Example\Release\libpng.pdb'; linking object as if no debug info
-libpng16d.lib(pngwrite.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng16d.lib(pngwrite.obj)' or at 'C:\Users\Tom Chiang\Downloads\Q6_Example\Release\libpng.pdb'; linking object as if no debug info
-libpng16d.lib(pngwtran.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng16d.lib(pngwtran.obj)' or at 'C:\Users\Tom Chiang\Downloads\Q6_Example\Release\libpng.pdb'; linking object as if no debug info
-libpng16d.lib(pngwutil.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng16d.lib(pngwutil.obj)' or at 'C:\Users\Tom Chiang\Downloads\Q6_Example\Release\libpng.pdb'; linking object as if no debug info
-  Q6_Example.vcxproj -> C:\Users\Tom Chiang\Downloads\Q6_Example\Release\Q6_Example.exe
-  Q6_Example.vcxproj -> C:\Users\Tom Chiang\Downloads\Q6_Example\Release\Q6_Example.pdb (Full PDB)
+  已完成程式碼產生
+zlibd.lib(adler32.obj) : warning LNK4099: 找不到 PDB 'zlib.pdb' (有 'zlibd.lib(adler32.obj)' 或位於 'D:\GraphicsRobot\Release\zlib.pdb')，當做沒有偵錯資訊，連結物件
+zlibd.lib(crc32.obj) : warning LNK4099: 找不到 PDB 'zlib.pdb' (有 'zlibd.lib(crc32.obj)' 或位於 'D:\GraphicsRobot\Release\zlib.pdb')，當做沒有偵錯資訊，連結物件
+zlibd.lib(deflate.obj) : warning LNK4099: 找不到 PDB 'zlib.pdb' (有 'zlibd.lib(deflate.obj)' 或位於 'D:\GraphicsRobot\Release\zlib.pdb')，當做沒有偵錯資訊，連結物件
+zlibd.lib(inffast.obj) : warning LNK4099: 找不到 PDB 'zlib.pdb' (有 'zlibd.lib(inffast.obj)' 或位於 'D:\GraphicsRobot\Release\zlib.pdb')，當做沒有偵錯資訊，連結物件
+zlibd.lib(inflate.obj) : warning LNK4099: 找不到 PDB 'zlib.pdb' (有 'zlibd.lib(inflate.obj)' 或位於 'D:\GraphicsRobot\Release\zlib.pdb')，當做沒有偵錯資訊，連結物件
+zlibd.lib(inftrees.obj) : warning LNK4099: 找不到 PDB 'zlib.pdb' (有 'zlibd.lib(inftrees.obj)' 或位於 'D:\GraphicsRobot\Release\zlib.pdb')，當做沒有偵錯資訊，連結物件
+zlibd.lib(trees.obj) : warning LNK4099: 找不到 PDB 'zlib.pdb' (有 'zlibd.lib(trees.obj)' 或位於 'D:\GraphicsRobot\Release\zlib.pdb')，當做沒有偵錯資訊，連結物件
+zlibd.lib(zutil.obj) : warning LNK4099: 找不到 PDB 'zlib.pdb' (有 'zlibd.lib(zutil.obj)' 或位於 'D:\GraphicsRobot\Release\zlib.pdb')，當做沒有偵錯資訊，連結物件
+libpng16d.lib(png.obj) : warning LNK4099: 找不到 PDB 'libpng.pdb' (有 'libpng16d.lib(png.obj)' 或位於 'D:\GraphicsRobot\Release\libpng.pdb')，當做沒有偵錯資訊，連結物件
+libpng16d.lib(pngerror.obj) : warning LNK4099: 找不到 PDB 'libpng.pdb' (有 'libpng16d.lib(pngerror.obj)' 或位於 'D:\GraphicsRobot\Release\libpng.pdb')，當做沒有偵錯資訊，連結物件
+libpng16d.lib(pngget.obj) : warning LNK4099: 找不到 PDB 'libpng.pdb' (有 'libpng16d.lib(pngget.obj)' 或位於 'D:\GraphicsRobot\Release\libpng.pdb')，當做沒有偵錯資訊，連結物件
+libpng16d.lib(pngmem.obj) : warning LNK4099: 找不到 PDB 'libpng.pdb' (有 'libpng16d.lib(pngmem.obj)' 或位於 'D:\GraphicsRobot\Release\libpng.pdb')，當做沒有偵錯資訊，連結物件
+libpng16d.lib(pngread.obj) : warning LNK4099: 找不到 PDB 'libpng.pdb' (有 'libpng16d.lib(pngread.obj)' 或位於 'D:\GraphicsRobot\Release\libpng.pdb')，當做沒有偵錯資訊，連結物件
+libpng16d.lib(pngrio.obj) : warning LNK4099: 找不到 PDB 'libpng.pdb' (有 'libpng16d.lib(pngrio.obj)' 或位於 'D:\GraphicsRobot\Release\libpng.pdb')，當做沒有偵錯資訊，連結物件
+libpng16d.lib(pngrtran.obj) : warning LNK4099: 找不到 PDB 'libpng.pdb' (有 'libpng16d.lib(pngrtran.obj)' 或位於 'D:\GraphicsRobot\Release\libpng.pdb')，當做沒有偵錯資訊，連結物件
+libpng16d.lib(pngrutil.obj) : warning LNK4099: 找不到 PDB 'libpng.pdb' (有 'libpng16d.lib(pngrutil.obj)' 或位於 'D:\GraphicsRobot\Release\libpng.pdb')，當做沒有偵錯資訊，連結物件
+libpng16d.lib(pngset.obj) : warning LNK4099: 找不到 PDB 'libpng.pdb' (有 'libpng16d.lib(pngset.obj)' 或位於 'D:\GraphicsRobot\Release\libpng.pdb')，當做沒有偵錯資訊，連結物件
+libpng16d.lib(pngtrans.obj) : warning LNK4099: 找不到 PDB 'libpng.pdb' (有 'libpng16d.lib(pngtrans.obj)' 或位於 'D:\GraphicsRobot\Release\libpng.pdb')，當做沒有偵錯資訊，連結物件
+libpng16d.lib(pngwio.obj) : warning LNK4099: 找不到 PDB 'libpng.pdb' (有 'libpng16d.lib(pngwio.obj)' 或位於 'D:\GraphicsRobot\Release\libpng.pdb')，當做沒有偵錯資訊，連結物件
+libpng16d.lib(pngwrite.obj) : warning LNK4099: 找不到 PDB 'libpng.pdb' (有 'libpng16d.lib(pngwrite.obj)' 或位於 'D:\GraphicsRobot\Release\libpng.pdb')，當做沒有偵錯資訊，連結物件
+libpng16d.lib(pngwtran.obj) : warning LNK4099: 找不到 PDB 'libpng.pdb' (有 'libpng16d.lib(pngwtran.obj)' 或位於 'D:\GraphicsRobot\Release\libpng.pdb')，當做沒有偵錯資訊，連結物件
+libpng16d.lib(pngwutil.obj) : warning LNK4099: 找不到 PDB 'libpng.pdb' (有 'libpng16d.lib(pngwutil.obj)' 或位於 'D:\GraphicsRobot\Release\libpng.pdb')，當做沒有偵錯資訊，連結物件
+  Q6_Example.vcxproj -> D:\GraphicsRobot\Release\Q6_Example.exe
+  Q6_Example.vcxproj -> D:\GraphicsRobot\Release\Q6_Example.pdb (Full PDB)

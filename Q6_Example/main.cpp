@@ -99,7 +99,7 @@ void drawSkybox(float size)
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
 	glPushMatrix();
-	glBindTexture(GL_TEXTURE_2D, skybox[SKY_BACK]);  //use the texture we want
+	glBindTexture(GL_TEXTURE_2D, skybox[SKY_RIGHT]);  //use the texture we want
 	glBegin(GL_QUADS);      //and draw a face
 							//back face
 	glTexCoord2f(0, 0);      //use the correct texture coordinate
@@ -111,7 +111,7 @@ void drawSkybox(float size)
 	glTexCoord2f(0, 1);
 	glVertex3f(size / 2, -size / 2, size / 2);
 	glEnd();
-	glBindTexture(GL_TEXTURE_2D, skybox[SKY_LEFT]);
+	glBindTexture(GL_TEXTURE_2D, skybox[SKY_BACK]);
 	glBegin(GL_QUADS);
 	//left face
 	glTexCoord2f(0, 0);
@@ -123,7 +123,7 @@ void drawSkybox(float size)
 	glTexCoord2f(0, 1);
 	glVertex3f(-size / 2, -size / 2, size / 2);
 	glEnd();
-	glBindTexture(GL_TEXTURE_2D, skybox[SKY_FRONT]);
+	glBindTexture(GL_TEXTURE_2D, skybox[SKY_LEFT]);
 	glBegin(GL_QUADS);
 	//front face
 	glTexCoord2f(1, 0);
@@ -135,7 +135,7 @@ void drawSkybox(float size)
 	glTexCoord2f(1, 1);
 	glVertex3f(size / 2, -size / 2, -size / 2);
 	glEnd();
-	glBindTexture(GL_TEXTURE_2D, skybox[SKY_RIGHT]);
+	glBindTexture(GL_TEXTURE_2D, skybox[SKY_FRONT]);
 	glBegin(GL_QUADS);
 	//right face
 	glTexCoord2f(0, 0);
@@ -343,11 +343,11 @@ void Keyboard(unsigned char key, int x, int y) {
 			eyedistance += 0.2;
 		break;
 	case 'a':
-		if (eyeAngley <= 10)
+		//if (eyeAngley <= 10)
 			eyeAngley += 1;
 		break;
 	case 'd':
-		if (eyeAngley >= -10)
+		//if (eyeAngley >= -10)
 			eyeAngley -= 1;
 		break;
 	case 'q':
