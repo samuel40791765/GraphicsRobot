@@ -35,7 +35,7 @@ float aspect = 1;
 float angle = 320;
 GLfloat mat[4];
 Robot *robot;
-enum { SKY_LEFT = 0, SKY_BACK, SKY_RIGHT, SKY_FRONT, SKY_TOP, SKY_BOTTOM };
+enum { SKY_LEFT = 0, SKY_BACK, SKY_RIGHT, SKY_FRONT, SKY_BOTTOM, SKY_TOP };
 GLuint skybox[6]; //the ids for the textures
 
 void SetLightSource()
@@ -99,75 +99,75 @@ void drawSkybox(float size)
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
 	glPushMatrix();
-	glBindTexture(GL_TEXTURE_2D, skybox[SKY_RIGHT]);  //use the texture we want
+	glBindTexture(GL_TEXTURE_2D, skybox[SKY_BACK]);  //use the texture we want
 	glBegin(GL_QUADS);      //and draw a face
 							//back face
-	glTexCoord2f(0, 0);      //use the correct texture coordinate
+	glTexCoord2f(1, 1);      //use the correct texture coordinate
 	glVertex3f(size / 2, size / 2, size / 2);       //and a vertex
-	glTexCoord2f(1, 0);      //and repeat it...
+	glTexCoord2f(0, 1);      //and repeat it...
 	glVertex3f(-size / 2, size / 2, size / 2);
-	glTexCoord2f(1, 1);
-	glVertex3f(-size / 2, -size / 2, size / 2);
-	glTexCoord2f(0, 1);
-	glVertex3f(size / 2, -size / 2, size / 2);
-	glEnd();
-	glBindTexture(GL_TEXTURE_2D, skybox[SKY_BACK]);
-	glBegin(GL_QUADS);
-	//left face
 	glTexCoord2f(0, 0);
-	glVertex3f(-size / 2, size / 2, size / 2);
-	glTexCoord2f(1, 0);
-	glVertex3f(-size / 2, size / 2, -size / 2);
-	glTexCoord2f(1, 1);
-	glVertex3f(-size / 2, -size / 2, -size / 2);
-	glTexCoord2f(0, 1);
 	glVertex3f(-size / 2, -size / 2, size / 2);
+	glTexCoord2f(1, 0);
+	glVertex3f(size / 2, -size / 2, size / 2);
 	glEnd();
 	glBindTexture(GL_TEXTURE_2D, skybox[SKY_LEFT]);
 	glBegin(GL_QUADS);
-	//front face
-	glTexCoord2f(1, 0);
-	glVertex3f(size / 2, size / 2, -size / 2);
-	glTexCoord2f(0, 0);
-	glVertex3f(-size / 2, size / 2, -size / 2);
-	glTexCoord2f(0, 1);
-	glVertex3f(-size / 2, -size / 2, -size / 2);
+	//left face
 	glTexCoord2f(1, 1);
-	glVertex3f(size / 2, -size / 2, -size / 2);
+	glVertex3f(-size / 2, size / 2, size / 2);
+	glTexCoord2f(0, 1);
+	glVertex3f(-size / 2, size / 2, -size / 2);
+	glTexCoord2f(0, 0);
+	glVertex3f(-size / 2, -size / 2, -size / 2);
+	glTexCoord2f(1, 0);
+	glVertex3f(-size / 2, -size / 2, size / 2);
 	glEnd();
 	glBindTexture(GL_TEXTURE_2D, skybox[SKY_FRONT]);
 	glBegin(GL_QUADS);
-	//right face
-	glTexCoord2f(0, 0);
-	glVertex3f(size / 2, size / 2, -size / 2);
-	glTexCoord2f(1, 0);
-	glVertex3f(size / 2, size / 2, size / 2);
-	glTexCoord2f(1, 1);
-	glVertex3f(size / 2, -size / 2, size / 2);
+	//front face
 	glTexCoord2f(0, 1);
+	glVertex3f(size / 2, size / 2, -size / 2);
+	glTexCoord2f(1, 1);
+	glVertex3f(-size / 2, size / 2, -size / 2);
+	glTexCoord2f(1, 0);
+	glVertex3f(-size / 2, -size / 2, -size / 2);
+	glTexCoord2f(0, 0);
+	glVertex3f(size / 2, -size / 2, -size / 2);
+	glEnd();
+	glBindTexture(GL_TEXTURE_2D, skybox[SKY_RIGHT]);
+	glBegin(GL_QUADS);
+	//right face
+	glTexCoord2f(1, 1);
+	glVertex3f(size / 2, size / 2, -size / 2);
+	glTexCoord2f(0, 1);
+	glVertex3f(size / 2, size / 2, size / 2);
+	glTexCoord2f(0, 0);
+	glVertex3f(size / 2, -size / 2, size / 2);
+	glTexCoord2f(1, 0);
 	glVertex3f(size / 2, -size / 2, -size / 2);
 	glEnd();
 	glBindTexture(GL_TEXTURE_2D, skybox[SKY_TOP]);
 	glBegin(GL_QUADS);                      //top face
-	glTexCoord2f(1, 0);
-	glVertex3f(size / 2, size / 2, size / 2);
-	glTexCoord2f(0, 0);
-	glVertex3f(-size / 2, size / 2, size / 2);
 	glTexCoord2f(0, 1);
-	glVertex3f(-size / 2, size / 2, -size / 2);
+	glVertex3f(size / 2, size / 2, size / 2);
 	glTexCoord2f(1, 1);
+	glVertex3f(-size / 2, size / 2, size / 2);
+	glTexCoord2f(1, 0);
+	glVertex3f(-size / 2, size / 2, -size / 2);
+	glTexCoord2f(0, 0);
 	glVertex3f(size / 2, size / 2, -size / 2);
 	glEnd();
 	glBindTexture(GL_TEXTURE_2D, skybox[SKY_BOTTOM]);
 	glBegin(GL_QUADS);
 	//bottom face
-	glTexCoord2f(1, 1);
-	glVertex3f(size / 2, -size / 2, size / 2);
-	glTexCoord2f(0, 1);
-	glVertex3f(-size / 2, -size / 2, size / 2);
 	glTexCoord2f(0, 0);
-	glVertex3f(-size / 2, -size / 2, -size / 2);
+	glVertex3f(size / 2, -size / 2, size / 2);
 	glTexCoord2f(1, 0);
+	glVertex3f(-size / 2, -size / 2, size / 2);
+	glTexCoord2f(1, 1);
+	glVertex3f(-size / 2, -size / 2, -size / 2);
+	glTexCoord2f(0, 1);
 	glVertex3f(size / 2, -size / 2, -size / 2);
 	glEnd();
 	glPopMatrix();
