@@ -12,7 +12,7 @@
 #define PUNCH 2
 #define WALK 1
 #define IDLE 0
-#define DPUNCH 3
+#define SRK_PUNCH 3
 using namespace glm;
 
 mat4 Projection;
@@ -301,7 +301,7 @@ void timer(int value)
 	case PUNCH:
 		robot->clenchfist();
 		break;
-	case DPUNCH:
+	case SRK_PUNCH:
 		robot->SRK_punch();
 		break;
 	}
@@ -394,7 +394,8 @@ void ActionMenuEvents(int option) {
 		action = PUNCH;
 		break;
 	case 3:
-		action = DPUNCH;
+		robot->initAction();
+		action = SRK_PUNCH;
 		break;
 	}
 }
@@ -421,12 +422,12 @@ void Mousemove(int x, int y)
 {
 	if (mouseldown == GL_TRUE)
 	{
-		eyeAngley += (x - mousex) / 10.0f;
+		eyeAngley += (x - mousex) / 15.0f;
 	}
 
 	if (mouseldown == GL_TRUE)
 	{
-		eyedistance += (y - mousey) / 25.0f;
+		eyedistance += (y - mousey) / 15.0f;
 	}
 	mousex = x, mousey = y;
 	glutPostRedisplay();

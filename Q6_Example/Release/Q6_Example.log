@@ -17,7 +17,7 @@ main.cpp(356): warning C4305: '-=': 從 'double' 轉換為 'float'，是由較�
 main.cpp(360): warning C4305: '+=': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
 LINK : warning LNK4098: 預設的程式庫 'LIBCMTD' 與其他使用的程式庫衝突，請使用 /NODEFAULTLIB:library
   正在產生程式碼
-  2 of 257 functions ( 0.8%) were compiled, the rest were copied from previous compilation.
+  3 of 257 functions ( 1.2%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     0 functions had inline decision re-evaluated but remain unchanged
   已完成程式碼產生
