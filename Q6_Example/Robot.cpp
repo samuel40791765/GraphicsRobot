@@ -1,10 +1,43 @@
 #include "Robot.h"
+#include <iostream>
 
 
 
 Robot::Robot()
 {
 	qobj = gluNewQuadric();
+	spin_angle = 0;
+	squat_length = 0;
+	jump_height = 0;
+	right_bicep_xangle = 90;
+	left_bicep_xangle = 90;
+	right_arm_xangle = -30;
+	left_arm_xangle = -30;
+	right_big_legxangle = 90;
+	left_big_legxangle = 90;
+	right_small_legxangle = 0;
+	left_small_legxangle = 0;
+	right_finger_angle = -20;
+	left_finger_angle = 20;
+	right_knuckle_angle = 0;
+	left_knuckle_angle = 0;
+	right_thumb_angle = 0;
+	left_thumb_angle = 0;
+	armswing = true;
+	legwalk = false;
+	knee_down = true;
+}
+
+
+Robot::~Robot()
+{
+}
+
+void Robot::initAction()
+{
+	spin_angle = 0;
+	squat_length = 0;
+	jump_height = 0;
 	right_bicep_xangle = 90;
 	left_bicep_xangle = 90;
 	right_arm_xangle = -30;
@@ -21,17 +54,20 @@ Robot::Robot()
 	left_thumb_angle = 0;
 	armswing = true;
 	legwalk = false;
-}
-
-
-Robot::~Robot()
-{
+	knee_down = true;
 }
 
 void Robot::drawRobot()
 {
 	//glRotatef(-90, 1, 0, 0);
 	//glRotatef(-90, 0, 1, 0);
+	glPushMatrix();	//push and pop whole body
+	glTranslatef(0, jump_height, 0);
+	glRotatef(spin_angle, 0, 1, 0);
+
+	glPushMatrix();  //push and pop head, body, left and right hands
+	glTranslatef(0, squat_length, 0);
+
 	drawBody();
 
 	glPushMatrix();
@@ -44,6 +80,8 @@ void Robot::drawRobot()
 	drawRightArm();
 	glPopMatrix();
 
+	glPopMatrix();
+
 	glPushMatrix();
 	glTranslatef(-0.7, 0, 0);
 	drawLeftLeg();
@@ -52,6 +90,8 @@ void Robot::drawRobot()
 	glPushMatrix();
 	glTranslatef(0.7, 0, 0);
 	drawRightLeg();
+	glPopMatrix();
+
 	glPopMatrix();
 }
 
@@ -68,10 +108,10 @@ void Robot::drawBody()
 	Material::SetCyanMaterial();
 	glTranslatef(0.75, 0.5, 1.25);
 	gluSphere(qobj, 0.1, 30, 30);
-	
+
 	glDisable(GL_LIGHTING);
 	glEnable(GL_COLOR_MATERIAL);
-	glColor3ub(48,213,200);
+	glColor3ub(48, 213, 200);
 	glTranslatef(-0.75, 0.9, 0);
 	glScalef(3.5, 3.5, 1);
 	//gluSphere(qobj, 0.05, 30, 30);
@@ -105,7 +145,7 @@ void Robot::drawBody()
 	gluSphere(qobj, 0.1, 30, 30);
 	glPopMatrix();
 
-	
+
 }
 
 void Robot::drawRightArm()
@@ -142,7 +182,7 @@ void Robot::drawRightArm()
 
 	glPushMatrix();
 	glRotatef(30, 1, 0, 0);
-	
+
 	//gluCylinder(qobj, 0.1, 0.1, 1, 20, 20);
 	glPopMatrix();
 }
@@ -375,7 +415,7 @@ void Robot::drawLeftLeg()
 }
 
 
-void Robot::roundRect(Pnt3f pnt,float height, float width, float lgth, float curve) {
+void Robot::roundRect(Pnt3f pnt, float height, float width, float lgth, float curve) {
 	glPushMatrix();
 	glTranslatef(pnt.x, pnt.y, pnt.z);
 	//draw spheres
@@ -414,7 +454,7 @@ void Robot::roundRect(Pnt3f pnt,float height, float width, float lgth, float cur
 	//draw edges
 	glPushMatrix();
 	glRotatef(180, 0, 1, 0);
-	gluCylinder(qobj, curve, curve,lgth, 50, 50);
+	gluCylinder(qobj, curve, curve, lgth, 50, 50);
 	glRotatef(90, 0, 1, 0);
 	gluCylinder(qobj, curve, curve, width, 50, 50);
 	glPopMatrix();
@@ -450,7 +490,7 @@ void Robot::roundRect(Pnt3f pnt,float height, float width, float lgth, float cur
 	glVertex3f(0, 0 - height, 0 + curve);
 
 	glNormal3f(0, 0, -1);
-	glVertex3f(0, 0, 0-lgth - curve);
+	glVertex3f(0, 0, 0 - lgth - curve);
 	glVertex3f(0 - width, 0, 0 - lgth - curve);
 	glVertex3f(0 - width, 0 - height, 0 - lgth - curve);
 	glVertex3f(0, 0 - height, 0 - lgth - curve);
@@ -478,9 +518,9 @@ void Robot::roundRect(Pnt3f pnt,float height, float width, float lgth, float cur
 	glVertex3f(0, 0 - height - curve, 0 - lgth);
 	glVertex3f(0 - width, 0 - height - curve, 0 - lgth);
 	glVertex3f(0 - width, 0 - height - curve, 0);
-	
-	
-	glEnd(); 
+
+
+	glEnd();
 	glPopMatrix();
 }
 
@@ -528,7 +568,7 @@ void Robot::clenchfist() {
 			right_knuckle_angle--;
 		if (right_thumb_angle < 60)
 			right_thumb_angle++;
-		if (right_finger_angle <= -110 )
+		if (right_finger_angle <= -110)
 			fist = false;
 	}
 	else {
@@ -540,5 +580,75 @@ void Robot::clenchfist() {
 			right_thumb_angle--;
 		if (right_finger_angle >= -20)
 			fist = true;
+	}
+}
+void Robot::SRK_punch()
+{
+	//std::cout << "knee down: " << knee_down << "  " << "jump: " << jump << std::endl;
+	if (knee_down) {
+		//squat
+		if (squat_length > -0.5) {
+			squat_length -= 0.01;
+		}
+		else {
+			knee_down = false;
+			jump = true;
+		}
+		//fist
+		if (right_finger_angle > -110)	//fist
+			right_finger_angle-=4;
+		if (right_knuckle_angle > -70)
+			right_knuckle_angle-=4;
+		if (right_thumb_angle < 60)
+			right_thumb_angle+=4;
+		//right arm up
+		if (right_arm_xangle > -75) {
+			right_arm_xangle--;
+			left_arm_xangle--;
+		}
+
+	}
+	else {
+		if (squat_length < 0.0) {
+			squat_length += 0.05;
+		}
+		else {
+			if (jump&&jump_height < 2.0){
+				jump_height += 0.07;
+				if (right_arm_xangle < -30) {
+					right_arm_xangle += 20;
+				}
+				if (right_bicep_xangle > -70) {
+					right_bicep_xangle -= 20;
+				}
+				if (spin_angle > -360)
+					spin_angle -= 12;
+			}
+			else if(jump&&jump_height >= 2.0){
+				jump = false;
+			}
+			if (!jump&&jump_height > 0.0) {
+				jump_height -= 0.07;
+				if (right_bicep_xangle < 90) {
+					right_bicep_xangle += 20;
+				}
+				if (left_arm_xangle < -30) {
+					left_arm_xangle += 10;
+				}
+				if (right_finger_angle < -20)	//fist
+					right_finger_angle+=4;
+				if (right_knuckle_angle < 0)
+					right_knuckle_angle+=4;
+				if (right_thumb_angle > 0)
+					right_thumb_angle-=4;
+
+			}
+			else if(!jump&&jump_height <= 0.0){
+				knee_down = true;
+				spin_angle = 0;
+			}
+			
+		}
+
 	}
 }

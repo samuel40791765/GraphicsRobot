@@ -4,16 +4,23 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include "Robot.h"
 #include <cstdio>
+#define _USE_MATH_DEFINES
 #include <cmath>
 #include <vector>
 #include "TextureApp.h"
+#define INITACTION -1
 #define PUNCH 2
 #define WALK 1
 #define IDLE 0
+#define DPUNCH 3
 using namespace glm;
 
 mat4 Projection;
 mat4 View;
+GLboolean mouserdown = GL_FALSE;
+GLboolean mouseldown = GL_FALSE;
+GLboolean mousemdown = GL_FALSE;
+static GLint mousex = 0, mousey = 0;
 float position = 0.0;
 float eyeAngley = 0.0;
 float eyedistance = 20.0;
@@ -24,6 +31,7 @@ void ChangeSize(int w, int h);
 void display();
 void Keyboard(unsigned char key, int x, int y);
 void Mouse(int button, int state, int x, int y);
+void Mousemove(int x, int y);
 void menuEvents(int option);
 void ActionMenuEvents(int option);
 
@@ -282,6 +290,9 @@ void timer(int value)
 {
 	glutPostRedisplay();
 	switch (action) {
+	case INITACTION:
+		robot->initAction();
+		break;
 	case IDLE:
 		break;
 	case WALK:
@@ -289,6 +300,9 @@ void timer(int value)
 		break;
 	case PUNCH:
 		robot->clenchfist();
+		break;
+	case DPUNCH:
+		robot->SRK_punch();
 		break;
 	}
 
@@ -308,14 +322,17 @@ int main(int argc, char* argv[])
 	glutKeyboardFunc(Keyboard);
 	int ActionMenu;
 	ActionMenu = glutCreateMenu(ActionMenuEvents);
+	glutAddMenuEntry("init action", -1);
 	glutAddMenuEntry("idle", 0);
 	glutAddMenuEntry("walk", 1);
 	glutAddMenuEntry("punch", 2);
+	glutAddMenuEntry("SRK-punch", 3);
 	glutAttachMenu(GLUT_RIGHT_BUTTON);
 	glutCreateMenu(menuEvents);
 	glutAddSubMenu("action", ActionMenu);
 	glutAttachMenu(GLUT_RIGHT_BUTTON);
 	glutMouseFunc(Mouse);
+	glutMotionFunc(Mousemove);
 
 	robot = new Robot();	
 	glutDisplayFunc(display);
@@ -336,11 +353,11 @@ void Keyboard(unsigned char key, int x, int y) {
 		break;
 	case 'w':
 		if (eyedistance > 1)
-			eyedistance -= 0.2;
+			eyedistance -= 0.4;
 		break;
 	case 's':
 		if (eyedistance <= 30)
-			eyedistance += 0.2;
+			eyedistance += 0.4;
 		break;
 	case 'a':
 		//if (eyeAngley <= 10)
@@ -364,6 +381,9 @@ void Keyboard(unsigned char key, int x, int y) {
 
 void ActionMenuEvents(int option) {
 	switch (option) {
+	case -1:
+		action = INITACTION;
+		break;
 	case 0:
 		action = IDLE;
 		break;
@@ -372,6 +392,9 @@ void ActionMenuEvents(int option) {
 		break;
 	case 2:
 		action = PUNCH;
+		break;
+	case 3:
+		action = DPUNCH;
 		break;
 	}
 }
@@ -383,7 +406,32 @@ void ChangeSize(int w, int h) {
 
 void Mouse(int button, int state, int x, int y) {
 	if (button == 2) isFrame = false;
+	if (state == GLUT_DOWN)
+	{
+		if (button == GLUT_LEFT_BUTTON) mouseldown = GL_TRUE;
+	}
+	else
+	{
+		if (button == GLUT_LEFT_BUTTON) mouseldown = GL_FALSE;
+	}
+	mousex = x, mousey = y;
 }
+
+void Mousemove(int x, int y)
+{
+	if (mouseldown == GL_TRUE)
+	{
+		eyeAngley += (x - mousex) / 10.0f;
+	}
+
+	if (mouseldown == GL_TRUE)
+	{
+		eyedistance += (y - mousey) / 25.0f;
+	}
+	mousex = x, mousey = y;
+	glutPostRedisplay();
+}
+
 
 void menuEvents(int option) {};
 void ModeMenuEvents(int option);
