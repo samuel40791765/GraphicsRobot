@@ -9,13 +9,18 @@
 #include <vector>
 #include "TextureApp.h"
 #define INITACTION -1
-#define PUNCH 2
-#define WALK 1
 #define IDLE 0
-#define SRK_PUNCH 3
-#define RUN 4
-#define PUSHUP 5
-#define BODY_SHAKE 10
+#define WALK 1
+#define RUN 2
+#define WARMUP 3
+#define PUSHUP 4
+#define BODY_SHAKE 5
+#define PUNCH 6
+#define SRK_PUNCH 7
+#define SHOOT 8
+
+
+
 using namespace glm;
 
 mat4 Projection;
@@ -302,6 +307,9 @@ void timer(int value)
 		robot->walk();
 		break;
 	case PUNCH:
+		robot->punch();
+		break;
+	case WARMUP:
 		robot->clenchfist();
 		break;
 	case SRK_PUNCH:
@@ -315,6 +323,9 @@ void timer(int value)
 		break;
 	case BODY_SHAKE:
 		robot->body_shake();
+		break;
+	case SHOOT:
+		robot->shoot();
 		break;
 
 	}
@@ -338,11 +349,15 @@ int main(int argc, char* argv[])
 	glutAddMenuEntry("init action", -1);
 	glutAddMenuEntry("idle", 0);
 	glutAddMenuEntry("walk", 1);
-	glutAddMenuEntry("punch", 2);
-	glutAddMenuEntry("SRK-punch", 3);
-	glutAddMenuEntry("RUN", 4);
-	glutAddMenuEntry("PUSH-UP", 5);
-	glutAddMenuEntry("Body-Shake", 10);
+	glutAddMenuEntry("RUN", 2);
+	glutAddMenuEntry("Warm Up", 3);
+	glutAddMenuEntry("PUSH-UP", 4);
+	glutAddMenuEntry("Body-Shake", 5);
+	glutAddMenuEntry("punch", 6);
+	glutAddMenuEntry("SRK-punch", 7);
+	glutAddMenuEntry("Shoot", 8);
+
+
 	glutAttachMenu(GLUT_RIGHT_BUTTON);
 	glutCreateMenu(menuEvents);
 	glutAddSubMenu("action", ActionMenu);
@@ -404,27 +419,38 @@ void ActionMenuEvents(int option) {
 		action = IDLE;
 		break;
 	case 1:
+		robot->initAction();
 		action = WALK;
 		break;
 	case 2:
-		action = PUNCH;
-		break;
-	case 3:
-		robot->initAction();
-		action = SRK_PUNCH;
-		break;
-	case 4:
 		robot->initAction();
 		action = RUN;
 		break;
-	case 5:
+	case 3:
+		robot->initAction();
+		action = WARMUP;
+		break;
+	case 4:
 		robot->initAction();
 		action = PUSHUP;
 		break;
-	case 10:
+	case 5:
 		robot->initAction();
 		action = BODY_SHAKE;
 		break;
+	case 6:
+		robot->initAction();
+		action = PUNCH;
+		break;
+	case 7:
+		robot->initAction();
+		action = SRK_PUNCH;
+		break;
+	case 8:
+		robot->initAction();
+		action = SHOOT;
+		break;
+	
 	}
 }
 void ChangeSize(int w, int h) {
@@ -463,4 +489,3 @@ void Mousemove(int x, int y)
 
 
 void menuEvents(int option) {};
-void ModeMenuEvents(int option);

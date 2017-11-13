@@ -16,6 +16,8 @@ Robot::Robot()
 	left_bicep_xangle = 90;
 	right_arm_xangle = -30;
 	left_arm_xangle = -30;
+	right_arm_zangle = 0;
+	left_arm_zangle = 0;
 	right_big_legxangle = 90;
 	left_big_legxangle = 90;
 	right_small_legxangle = 0;
@@ -26,9 +28,19 @@ Robot::Robot()
 	left_knuckle_angle = 0;
 	right_thumb_angle = 0;
 	left_thumb_angle = 0;
+	right_wrist_angle = 0;
+	left_wrist_angle = 0;
+	right_wrist_offset = 0;
+	left_wrist_offset = 0;
 	armswing = true;
 	legwalk = false;
 	knee_down = true;
+	shooting = true;
+	projectile = false;
+	punching = true;
+	punchonehand = false;
+	projectile_space = 0;
+	shoot_count = 0;
 }
 
 
@@ -48,6 +60,8 @@ void Robot::initAction()
 	left_bicep_xangle = 90;
 	right_arm_xangle = -30;
 	left_arm_xangle = -30;
+	right_arm_zangle = 0;
+	left_arm_zangle = 0;
 	right_big_legxangle = 90;
 	left_big_legxangle = 90;
 	right_small_legxangle = 0;
@@ -58,10 +72,20 @@ void Robot::initAction()
 	left_knuckle_angle = 0;
 	right_thumb_angle = 0;
 	left_thumb_angle = 0;
+	right_wrist_angle = 0;
+	left_wrist_angle = 0;
+	right_wrist_offset = 0;
+	left_wrist_offset = 0;
 	armswing = true;
 	legwalk = false;
 	knee_down = true;
 	do_push = false;
+	projectile = false;
+	shooting = true;
+	punching = true;
+	punchonehand = false;
+	projectile_space = 0;
+	shoot_count = 0;
 }
 
 void Robot::drawRobot()
@@ -175,12 +199,21 @@ void Robot::drawRightArm()
 	gluSphere(qobj, 0.2, 10, 10);
 	glRotatef(-15, 0, 1, 0);
 	glRotatef(right_arm_xangle, 1, 0, 0);
+	glRotatef(right_arm_zangle, 0, 0, 1);
 	glPushMatrix();
 	glScalef(1, 1.3, 1);
 	gluCylinder(qobj, 0.1, 0.2, 1, 20, 20);
 	glPopMatrix();
-
 	glTranslatef(0, 0, 1.05);
+	if (projectile) {
+		Material::SetCyanMaterial();
+		glPushMatrix();
+		glTranslatef(0, 0, projectile_space);
+		gluSphere(qobj, 0.5, 30, 30);
+		glPopMatrix();
+	}
+	glTranslatef(right_wrist_offset, 0, 0);
+	glRotatef(right_wrist_angle, 0, 180, 0);
 	drawRightHand();
 	glPopMatrix();
 
@@ -297,10 +330,12 @@ void Robot::drawLeftHand()
 	glPopMatrix();
 
 	glPushMatrix(); //index
+	glRotatef(left_knuckle_angle, 0, 1, 0);
 	glTranslatef(0, 0.1, 0.15);
 	glRotatef(-20, 1, 0, 0);
 	gluCylinder(qobj, 0.05, 0.05, 0.1, 20, 20);
 	glTranslatef(0, 0.0, 0.11);
+	glRotatef(left_finger_angle, 0, 1, 0);
 	gluSphere(qobj, 0.05, 10, 10);
 	glTranslatef(0, 0.0, 0.04);
 	glRotatef(20, 0, 1, 0);
@@ -310,9 +345,11 @@ void Robot::drawLeftHand()
 	glPopMatrix();
 
 	glPushMatrix(); //middle
+	glRotatef(left_knuckle_angle, 0, 1, 0);
 	glTranslatef(0, 0, 0.2);
 	gluCylinder(qobj, 0.05, 0.05, 0.12, 20, 20);
 	glTranslatef(0, 0.0, 0.17);
+	glRotatef(left_finger_angle, 0, 1, 0);
 	gluSphere(qobj, 0.05, 10, 10);
 	glTranslatef(0, 0.0, 0.04);
 	glRotatef(20, 0, 1, 0);
@@ -322,10 +359,12 @@ void Robot::drawLeftHand()
 	glPopMatrix();
 
 	glPushMatrix(); //ring
+	glRotatef(left_knuckle_angle, 0, 1, 0);
 	glTranslatef(0, -0.1, 0.15);
 	glRotatef(10, 1, 0, 0);
 	gluCylinder(qobj, 0.05, 0.05, 0.08, 20, 20);
 	glTranslatef(0, 0.0, 0.12);
+	glRotatef(left_finger_angle, 0, 1, 0);
 	gluSphere(qobj, 0.05, 10, 10);
 	glTranslatef(0, 0.0, 0.04);
 	glRotatef(20, 0, 1, 0);
@@ -335,10 +374,12 @@ void Robot::drawLeftHand()
 	glPopMatrix();
 
 	glPushMatrix(); //pinky
+	glRotatef(left_knuckle_angle, 0, 1, 0);
 	glTranslatef(0, -0.15, 0.08);
 	glRotatef(30, 1, 0, 0);
 	gluCylinder(qobj, 0.045, 0.045, 0.07, 20, 20);
 	glTranslatef(0, 0.0, 0.085);
+	glRotatef(left_finger_angle, 0, 1, 0);
 	gluSphere(qobj, 0.045, 10, 10);
 	glTranslatef(0, 0.0, 0.04);
 	glRotatef(20, 0, 1, 0);
@@ -362,16 +403,19 @@ void Robot::drawLeftArm()
 	glRotatef(-15, 0, 1, 0);
 	Material::SetBlackMaterial();
 	gluCylinder(qobj, 0.1, 0.1, 1, 20, 20);
-	glTranslatef(0, 0, 1.2);
+	glTranslatef(0, 0, 1);
 	Material::SetWhiteMaterial();
 	gluSphere(qobj, 0.2, 10, 10);
 	glRotatef(15, 0, 1, 0);
 	glRotatef(left_arm_xangle, 1, 0, 0);
+	glRotatef(left_arm_zangle, 0, 0, 1);
 	glPushMatrix();
 	glScalef(1, 1.3, 1);
 	gluCylinder(qobj, 0.1, 0.2, 1, 20, 20);
 	glPopMatrix();
 	glTranslatef(0, 0, 1.05);
+	glTranslatef(left_wrist_offset, 0, 0);
+	glRotatef(left_wrist_angle, 0, 180, 0);
 	drawLeftHand();
 	glPopMatrix();
 
@@ -580,7 +624,15 @@ void Robot::clenchfist() {
 			right_knuckle_angle--;
 		if (right_thumb_angle < 60)
 			right_thumb_angle++;
-		if (right_finger_angle <= -110)
+
+		if (left_finger_angle < 110)
+			left_finger_angle++;
+		if (left_knuckle_angle < 70)
+			left_knuckle_angle++;
+		if (left_thumb_angle > -60)
+			left_thumb_angle--;
+
+		if (right_finger_angle <= -110 && left_finger_angle >= 110)
 			fist = false;
 	}
 	else {
@@ -590,7 +642,15 @@ void Robot::clenchfist() {
 			right_knuckle_angle++;
 		if (right_thumb_angle > 0)
 			right_thumb_angle--;
-		if (right_finger_angle >= -20)
+
+		if (left_finger_angle > 20)
+			left_finger_angle--;
+		if (left_knuckle_angle > 0)
+			left_knuckle_angle--;
+		if (left_thumb_angle < 0)
+			left_thumb_angle++;
+
+		if (right_finger_angle >= -20 && left_finger_angle <= 20)
 			fist = true;
 	}
 }
@@ -613,6 +673,14 @@ void Robot::SRK_punch()
 			right_knuckle_angle-=4;
 		if (right_thumb_angle < 60)
 			right_thumb_angle+=4;
+		if (left_finger_angle < 110)
+			left_finger_angle+=4;
+		if (left_knuckle_angle < 70)
+			left_knuckle_angle+=4;
+		if (left_thumb_angle > -60)
+			left_thumb_angle-=4;
+
+
 		//right arm up
 		if (right_arm_xangle > -75) {
 			right_arm_xangle--;
@@ -653,6 +721,13 @@ void Robot::SRK_punch()
 					right_knuckle_angle+=4;
 				if (right_thumb_angle > 0)
 					right_thumb_angle-=4;
+				if (left_finger_angle > 20)
+					left_finger_angle-=4;
+				if (left_knuckle_angle > 0)
+					left_knuckle_angle-=4;
+				if (left_thumb_angle < 0)
+					left_thumb_angle+=4;
+
 
 			}
 			else if(!jump&&jump_height <= 0.0){
@@ -664,6 +739,7 @@ void Robot::SRK_punch()
 
 	}
 }
+
 void Robot::run()
 {
 	if (right_bicep_xangle >= -90) {
@@ -779,3 +855,149 @@ void Robot::body_shake()
 			armswing = true;
 	}
 }
+
+void Robot::shoot() {
+	if (shooting) {
+		if (right_bicep_xangle >= 3) {
+			right_bicep_xangle--;
+		}
+		if (right_arm_xangle <= 0) {
+			right_arm_xangle++;
+		}
+		if (right_wrist_angle<=180) {
+			right_wrist_angle++;
+		}
+		if (right_wrist_offset <= 0.4) {
+			right_wrist_offset += (0.4 / 180);
+		}
+		if (right_wrist_angle >= 180) {
+			projectile = true;
+			if (projectile_space <= 20) {
+				projectile_space += 0.8;
+			}
+			if (projectile_space >= 20) {
+				projectile = false;
+				shoot_count++;
+				projectile_space = 0;
+			}
+			if (shoot_count == 3) {
+				shooting = false;
+				shoot_count = 0;
+			}
+		}
+	}
+	else {
+		if (right_bicep_xangle <= 90) {
+			right_bicep_xangle++;
+		}
+		if (right_arm_xangle >= -30) {
+			right_arm_xangle--;
+		}
+		if (right_wrist_angle >= 0) {
+			right_wrist_angle-=3;
+		}
+		if (right_wrist_offset >= 0) {
+			right_wrist_offset -= (1.2 / 180);
+		}
+		if (right_bicep_xangle >= 90) {
+			shooting = true;
+		}
+	}
+}
+
+void Robot::punch() {
+	if (punching) {
+		if (right_finger_angle > -110)
+			right_finger_angle--;
+		if (right_knuckle_angle > -70)
+			right_knuckle_angle--;
+		if (right_thumb_angle < 60)
+			right_thumb_angle++;
+
+		if (left_finger_angle < 110)
+			left_finger_angle++;
+		if (left_knuckle_angle < 70)
+			left_knuckle_angle++;
+		if (left_thumb_angle > -60)
+			left_thumb_angle--;
+
+		if (right_arm_xangle > -70)
+			right_arm_xangle--;
+
+		if (left_arm_xangle > -70)
+			left_arm_xangle--;
+
+
+		if (right_finger_angle <= -110 && left_finger_angle >= 110) {
+			if (!punchonehand) {
+				if (left_arm_xangle < 0)
+					left_arm_xangle += 15;
+				if (left_bicep_xangle > 10)
+					left_bicep_xangle -= (80 / (70 / 15));
+
+				if (left_arm_zangle < 90)
+					left_arm_zangle += 20;
+
+				if (left_bicep_xangle <= 10)
+					punchonehand = true;
+			}
+			else {
+				if (left_arm_xangle > -70)
+					left_arm_xangle -= 10;
+				if (left_bicep_xangle < 90)
+					left_bicep_xangle += (80 / (70 / 10));
+				if (left_arm_zangle > 0)
+					left_arm_zangle -= 20;
+				if (right_arm_zangle < 90)
+					right_arm_zangle += 20;
+				if (right_arm_xangle < 0)
+					right_arm_xangle += 10;
+
+				if (right_bicep_xangle > 10)
+					right_bicep_xangle -= (80 / (70 / 10));
+
+				if (right_bicep_xangle <= 10) {
+					punching = false;
+					punchonehand = false;
+				}
+			}
+			/*if (left_bicep_xangle >= 3) {
+				left_bicep_xangle -= 20;
+			}
+			if (left_bicep_xangle >= 3) {
+				left_bicep_xangle -= 20;
+			}*/
+			//punching = false;
+		}
+	}
+	else {
+
+		if (right_finger_angle < -20)
+			right_finger_angle++;
+		if (right_knuckle_angle < 0)
+			right_knuckle_angle++;
+		if (right_thumb_angle > 0)
+			right_thumb_angle--;
+
+		if (left_finger_angle > 20)
+			left_finger_angle--;
+		if (left_knuckle_angle > 0)
+			left_knuckle_angle--;
+		if (left_thumb_angle < 0)
+			left_thumb_angle++;
+		if (right_arm_zangle > 0)
+			right_arm_zangle -= 20;
+		if (right_bicep_xangle < 90) 
+			right_bicep_xangle += 2;
+		
+		if (right_arm_xangle > -30) 
+			right_arm_xangle--;
+		
+		if (left_arm_xangle < -30) 
+			left_arm_xangle++;
+		
+		if (right_finger_angle >= -20 && left_finger_angle <= 20 && right_arm_xangle >= -30)
+			punching = true;
+	}
+}
+

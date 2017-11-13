@@ -1,110 +1,142 @@
-﻿  Robot.cpp
-Robot.cpp(83): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(88): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(95): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(100): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(114): warning C4305: '引數': 從 'double' 轉換為 'const float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(114): warning C4305: '引數': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(116): warning C4305: '引數': 從 'double' 轉換為 'const float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(116): warning C4305: '引數': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(124): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(136): warning C4305: '引數': 從 'double' 轉換為 'const float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(136): warning C4305: '引數': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(139): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(140): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(146): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(152): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(179): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(183): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(203): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(208): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(212): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(214): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(222): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(225): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(228): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(230): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(236): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(238): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(241): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(243): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(249): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(252): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(255): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(257): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(263): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(266): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(269): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(271): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(282): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(287): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(291): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(293): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(300): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(303): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(305): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(308): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(313): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(315): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(317): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(320): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(325): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(328): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(330): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(333): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(338): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(341): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(343): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(346): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(365): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(371): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(374): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(394): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(399): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(403): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(404): warning C4305: '引數': 從 'double' 轉換為 'const float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(404): warning C4305: '引數': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(414): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(418): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(422): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(423): warning C4305: '引數': 從 'double' 轉換為 'const float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(423): warning C4305: '引數': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(603): warning C4305: '-=': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(625): warning C4305: '+=': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(629): warning C4305: '+=': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(643): warning C4305: '-=': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(721): warning C4305: '+=': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(729): warning C4305: '-=': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(752): warning C4305: '-=': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(755): warning C4305: '-=': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-Robot.cpp(776): warning C4305: '+=': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-LINK : warning LNK4098: 預設的程式庫 'LIBCMTD' 與其他使用的程式庫衝突，請使用 /NODEFAULTLIB:library
-  正在產生程式碼
-  4 of 260 functions ( 1.5%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
-  已完成程式碼產生
-zlibd.lib(adler32.obj) : warning LNK4099: 找不到 PDB 'zlib.pdb' (有 'zlibd.lib(adler32.obj)' 或位於 'D:\GraphicsRobot\Release\zlib.pdb')，當做沒有偵錯資訊，連結物件
-zlibd.lib(crc32.obj) : warning LNK4099: 找不到 PDB 'zlib.pdb' (有 'zlibd.lib(crc32.obj)' 或位於 'D:\GraphicsRobot\Release\zlib.pdb')，當做沒有偵錯資訊，連結物件
-zlibd.lib(deflate.obj) : warning LNK4099: 找不到 PDB 'zlib.pdb' (有 'zlibd.lib(deflate.obj)' 或位於 'D:\GraphicsRobot\Release\zlib.pdb')，當做沒有偵錯資訊，連結物件
-zlibd.lib(inffast.obj) : warning LNK4099: 找不到 PDB 'zlib.pdb' (有 'zlibd.lib(inffast.obj)' 或位於 'D:\GraphicsRobot\Release\zlib.pdb')，當做沒有偵錯資訊，連結物件
-zlibd.lib(inflate.obj) : warning LNK4099: 找不到 PDB 'zlib.pdb' (有 'zlibd.lib(inflate.obj)' 或位於 'D:\GraphicsRobot\Release\zlib.pdb')，當做沒有偵錯資訊，連結物件
-zlibd.lib(inftrees.obj) : warning LNK4099: 找不到 PDB 'zlib.pdb' (有 'zlibd.lib(inftrees.obj)' 或位於 'D:\GraphicsRobot\Release\zlib.pdb')，當做沒有偵錯資訊，連結物件
-zlibd.lib(trees.obj) : warning LNK4099: 找不到 PDB 'zlib.pdb' (有 'zlibd.lib(trees.obj)' 或位於 'D:\GraphicsRobot\Release\zlib.pdb')，當做沒有偵錯資訊，連結物件
-zlibd.lib(zutil.obj) : warning LNK4099: 找不到 PDB 'zlib.pdb' (有 'zlibd.lib(zutil.obj)' 或位於 'D:\GraphicsRobot\Release\zlib.pdb')，當做沒有偵錯資訊，連結物件
-libpng16d.lib(png.obj) : warning LNK4099: 找不到 PDB 'libpng.pdb' (有 'libpng16d.lib(png.obj)' 或位於 'D:\GraphicsRobot\Release\libpng.pdb')，當做沒有偵錯資訊，連結物件
-libpng16d.lib(pngerror.obj) : warning LNK4099: 找不到 PDB 'libpng.pdb' (有 'libpng16d.lib(pngerror.obj)' 或位於 'D:\GraphicsRobot\Release\libpng.pdb')，當做沒有偵錯資訊，連結物件
-libpng16d.lib(pngget.obj) : warning LNK4099: 找不到 PDB 'libpng.pdb' (有 'libpng16d.lib(pngget.obj)' 或位於 'D:\GraphicsRobot\Release\libpng.pdb')，當做沒有偵錯資訊，連結物件
-libpng16d.lib(pngmem.obj) : warning LNK4099: 找不到 PDB 'libpng.pdb' (有 'libpng16d.lib(pngmem.obj)' 或位於 'D:\GraphicsRobot\Release\libpng.pdb')，當做沒有偵錯資訊，連結物件
-libpng16d.lib(pngread.obj) : warning LNK4099: 找不到 PDB 'libpng.pdb' (有 'libpng16d.lib(pngread.obj)' 或位於 'D:\GraphicsRobot\Release\libpng.pdb')，當做沒有偵錯資訊，連結物件
-libpng16d.lib(pngrio.obj) : warning LNK4099: 找不到 PDB 'libpng.pdb' (有 'libpng16d.lib(pngrio.obj)' 或位於 'D:\GraphicsRobot\Release\libpng.pdb')，當做沒有偵錯資訊，連結物件
-libpng16d.lib(pngrtran.obj) : warning LNK4099: 找不到 PDB 'libpng.pdb' (有 'libpng16d.lib(pngrtran.obj)' 或位於 'D:\GraphicsRobot\Release\libpng.pdb')，當做沒有偵錯資訊，連結物件
-libpng16d.lib(pngrutil.obj) : warning LNK4099: 找不到 PDB 'libpng.pdb' (有 'libpng16d.lib(pngrutil.obj)' 或位於 'D:\GraphicsRobot\Release\libpng.pdb')，當做沒有偵錯資訊，連結物件
-libpng16d.lib(pngset.obj) : warning LNK4099: 找不到 PDB 'libpng.pdb' (有 'libpng16d.lib(pngset.obj)' 或位於 'D:\GraphicsRobot\Release\libpng.pdb')，當做沒有偵錯資訊，連結物件
-libpng16d.lib(pngtrans.obj) : warning LNK4099: 找不到 PDB 'libpng.pdb' (有 'libpng16d.lib(pngtrans.obj)' 或位於 'D:\GraphicsRobot\Release\libpng.pdb')，當做沒有偵錯資訊，連結物件
-libpng16d.lib(pngwio.obj) : warning LNK4099: 找不到 PDB 'libpng.pdb' (有 'libpng16d.lib(pngwio.obj)' 或位於 'D:\GraphicsRobot\Release\libpng.pdb')，當做沒有偵錯資訊，連結物件
-libpng16d.lib(pngwrite.obj) : warning LNK4099: 找不到 PDB 'libpng.pdb' (有 'libpng16d.lib(pngwrite.obj)' 或位於 'D:\GraphicsRobot\Release\libpng.pdb')，當做沒有偵錯資訊，連結物件
-libpng16d.lib(pngwtran.obj) : warning LNK4099: 找不到 PDB 'libpng.pdb' (有 'libpng16d.lib(pngwtran.obj)' 或位於 'D:\GraphicsRobot\Release\libpng.pdb')，當做沒有偵錯資訊，連結物件
-libpng16d.lib(pngwutil.obj) : warning LNK4099: 找不到 PDB 'libpng.pdb' (有 'libpng16d.lib(pngwutil.obj)' 或位於 'D:\GraphicsRobot\Release\libpng.pdb')，當做沒有偵錯資訊，連結物件
-  Q6_Example.vcxproj -> D:\GraphicsRobot\Release\Q6_Example.exe
-  Q6_Example.vcxproj -> D:\GraphicsRobot\Release\Q6_Example.pdb (Full PDB)
+﻿  main.cpp
+main.cpp(211): warning C4305: '=': truncation from 'double' to 'GLfloat'
+main.cpp(212): warning C4305: '=': truncation from 'double' to 'GLfloat'
+main.cpp(213): warning C4305: '=': truncation from 'double' to 'GLfloat'
+main.cpp(216): warning C4305: '=': truncation from 'double' to 'GLfloat'
+main.cpp(217): warning C4305: '=': truncation from 'double' to 'GLfloat'
+main.cpp(218): warning C4305: '=': truncation from 'double' to 'GLfloat'
+main.cpp(220): warning C4305: '=': truncation from 'double' to 'GLfloat'
+main.cpp(221): warning C4305: '=': truncation from 'double' to 'GLfloat'
+main.cpp(222): warning C4305: '=': truncation from 'double' to 'GLfloat'
+main.cpp(224): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+main.cpp(247): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+main.cpp(290): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+main.cpp(387): warning C4305: '-=': truncation from 'double' to 'float'
+main.cpp(391): warning C4305: '+=': truncation from 'double' to 'float'
+  Material.cpp
+Material.cpp(18): warning C4838: conversion from 'double' to 'GLfloat' requires a narrowing conversion
+Material.cpp(18): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+Material.cpp(19): warning C4838: conversion from 'double' to 'GLfloat' requires a narrowing conversion
+Material.cpp(19): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+Material.cpp(20): warning C4838: conversion from 'double' to 'GLfloat' requires a narrowing conversion
+Material.cpp(20): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+Material.cpp(21): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+Material.cpp(56): warning C4838: conversion from 'double' to 'GLfloat' requires a narrowing conversion
+Material.cpp(56): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+Material.cpp(57): warning C4838: conversion from 'double' to 'GLfloat' requires a narrowing conversion
+Material.cpp(57): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+Material.cpp(58): warning C4838: conversion from 'double' to 'GLfloat' requires a narrowing conversion
+Material.cpp(58): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+  Pnt3f.cpp
+Pnt3f.cpp(78): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  Robot.cpp
+Robot.cpp(107): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(112): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(119): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(124): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(138): warning C4305: 'argument': truncation from 'double' to 'const float'
+Robot.cpp(138): warning C4305: 'argument': truncation from 'double' to 'float'
+Robot.cpp(140): warning C4305: 'argument': truncation from 'double' to 'const float'
+Robot.cpp(140): warning C4305: 'argument': truncation from 'double' to 'float'
+Robot.cpp(148): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(160): warning C4305: 'argument': truncation from 'double' to 'const float'
+Robot.cpp(160): warning C4305: 'argument': truncation from 'double' to 'float'
+Robot.cpp(163): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(164): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(170): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(176): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(204): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(207): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(236): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(241): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(245): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(247): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(255): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(258): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(261): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(263): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(269): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(271): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(274): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(276): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(282): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(285): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(288): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(290): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(296): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(299): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(302): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(304): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(315): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(320): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(324): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(326): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(334): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(337): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(340): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(343): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(349): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(351): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(354): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(357): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(363): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(366): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(369): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(372): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(378): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(381): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(384): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(387): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(413): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(416): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(438): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(443): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(447): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(448): warning C4305: 'argument': truncation from 'double' to 'const float'
+Robot.cpp(448): warning C4305: 'argument': truncation from 'double' to 'float'
+Robot.cpp(458): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(462): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(466): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+Robot.cpp(467): warning C4305: 'argument': truncation from 'double' to 'const float'
+Robot.cpp(467): warning C4305: 'argument': truncation from 'double' to 'float'
+Robot.cpp(663): warning C4305: '-=': truncation from 'double' to 'float'
+Robot.cpp(693): warning C4305: '+=': truncation from 'double' to 'float'
+Robot.cpp(697): warning C4305: '+=': truncation from 'double' to 'float'
+Robot.cpp(711): warning C4305: '-=': truncation from 'double' to 'float'
+Robot.cpp(797): warning C4305: '+=': truncation from 'double' to 'float'
+Robot.cpp(805): warning C4305: '-=': truncation from 'double' to 'float'
+Robot.cpp(828): warning C4305: '-=': truncation from 'double' to 'float'
+Robot.cpp(831): warning C4305: '-=': truncation from 'double' to 'float'
+Robot.cpp(852): warning C4305: '+=': truncation from 'double' to 'float'
+Robot.cpp(871): warning C4305: '+=': truncation from 'double' to 'float'
+Robot.cpp(876): warning C4305: '+=': truncation from 'double' to 'float'
+Robot.cpp(900): warning C4305: '-=': truncation from 'double' to 'float'
+  TextureApp.cpp
+LINK : warning LNK4098: defaultlib 'LIBCMTD' conflicts with use of other libs; use /NODEFAULTLIB:library
+  Generating code
+  All 262 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+zlibd.lib(adler32.obj) : warning LNK4099: PDB 'zlib.pdb' was not found with 'zlibd.lib(adler32.obj)' or at 'C:\Users\Tom Chiang\Downloads\Q6_Example\Release\zlib.pdb'; linking object as if no debug info
+zlibd.lib(crc32.obj) : warning LNK4099: PDB 'zlib.pdb' was not found with 'zlibd.lib(crc32.obj)' or at 'C:\Users\Tom Chiang\Downloads\Q6_Example\Release\zlib.pdb'; linking object as if no debug info
+zlibd.lib(deflate.obj) : warning LNK4099: PDB 'zlib.pdb' was not found with 'zlibd.lib(deflate.obj)' or at 'C:\Users\Tom Chiang\Downloads\Q6_Example\Release\zlib.pdb'; linking object as if no debug info
+zlibd.lib(inffast.obj) : warning LNK4099: PDB 'zlib.pdb' was not found with 'zlibd.lib(inffast.obj)' or at 'C:\Users\Tom Chiang\Downloads\Q6_Example\Release\zlib.pdb'; linking object as if no debug info
+zlibd.lib(inflate.obj) : warning LNK4099: PDB 'zlib.pdb' was not found with 'zlibd.lib(inflate.obj)' or at 'C:\Users\Tom Chiang\Downloads\Q6_Example\Release\zlib.pdb'; linking object as if no debug info
+zlibd.lib(inftrees.obj) : warning LNK4099: PDB 'zlib.pdb' was not found with 'zlibd.lib(inftrees.obj)' or at 'C:\Users\Tom Chiang\Downloads\Q6_Example\Release\zlib.pdb'; linking object as if no debug info
+zlibd.lib(trees.obj) : warning LNK4099: PDB 'zlib.pdb' was not found with 'zlibd.lib(trees.obj)' or at 'C:\Users\Tom Chiang\Downloads\Q6_Example\Release\zlib.pdb'; linking object as if no debug info
+zlibd.lib(zutil.obj) : warning LNK4099: PDB 'zlib.pdb' was not found with 'zlibd.lib(zutil.obj)' or at 'C:\Users\Tom Chiang\Downloads\Q6_Example\Release\zlib.pdb'; linking object as if no debug info
+libpng16d.lib(png.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng16d.lib(png.obj)' or at 'C:\Users\Tom Chiang\Downloads\Q6_Example\Release\libpng.pdb'; linking object as if no debug info
+libpng16d.lib(pngerror.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng16d.lib(pngerror.obj)' or at 'C:\Users\Tom Chiang\Downloads\Q6_Example\Release\libpng.pdb'; linking object as if no debug info
+libpng16d.lib(pngget.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng16d.lib(pngget.obj)' or at 'C:\Users\Tom Chiang\Downloads\Q6_Example\Release\libpng.pdb'; linking object as if no debug info
+libpng16d.lib(pngmem.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng16d.lib(pngmem.obj)' or at 'C:\Users\Tom Chiang\Downloads\Q6_Example\Release\libpng.pdb'; linking object as if no debug info
+libpng16d.lib(pngread.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng16d.lib(pngread.obj)' or at 'C:\Users\Tom Chiang\Downloads\Q6_Example\Release\libpng.pdb'; linking object as if no debug info
+libpng16d.lib(pngrio.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng16d.lib(pngrio.obj)' or at 'C:\Users\Tom Chiang\Downloads\Q6_Example\Release\libpng.pdb'; linking object as if no debug info
+libpng16d.lib(pngrtran.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng16d.lib(pngrtran.obj)' or at 'C:\Users\Tom Chiang\Downloads\Q6_Example\Release\libpng.pdb'; linking object as if no debug info
+libpng16d.lib(pngrutil.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng16d.lib(pngrutil.obj)' or at 'C:\Users\Tom Chiang\Downloads\Q6_Example\Release\libpng.pdb'; linking object as if no debug info
+libpng16d.lib(pngset.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng16d.lib(pngset.obj)' or at 'C:\Users\Tom Chiang\Downloads\Q6_Example\Release\libpng.pdb'; linking object as if no debug info
+libpng16d.lib(pngtrans.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng16d.lib(pngtrans.obj)' or at 'C:\Users\Tom Chiang\Downloads\Q6_Example\Release\libpng.pdb'; linking object as if no debug info
+libpng16d.lib(pngwio.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng16d.lib(pngwio.obj)' or at 'C:\Users\Tom Chiang\Downloads\Q6_Example\Release\libpng.pdb'; linking object as if no debug info
+libpng16d.lib(pngwrite.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng16d.lib(pngwrite.obj)' or at 'C:\Users\Tom Chiang\Downloads\Q6_Example\Release\libpng.pdb'; linking object as if no debug info
+libpng16d.lib(pngwtran.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng16d.lib(pngwtran.obj)' or at 'C:\Users\Tom Chiang\Downloads\Q6_Example\Release\libpng.pdb'; linking object as if no debug info
+libpng16d.lib(pngwutil.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng16d.lib(pngwutil.obj)' or at 'C:\Users\Tom Chiang\Downloads\Q6_Example\Release\libpng.pdb'; linking object as if no debug info
+  Q6_Example.vcxproj -> C:\Users\Tom Chiang\Downloads\Q6_Example\Release\Q6_Example.exe
+  Q6_Example.vcxproj -> C:\Users\Tom Chiang\Downloads\Q6_Example\Release\Q6_Example.pdb (Full PDB)
