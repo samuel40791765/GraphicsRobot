@@ -15,6 +15,7 @@
 #define SRK_PUNCH 3
 #define RUN 4
 #define PUSHUP 5
+#define BODY_SHAKE 10
 using namespace glm;
 
 mat4 Projection;
@@ -312,6 +313,9 @@ void timer(int value)
 	case PUSHUP:
 		robot->push_up();
 		break;
+	case BODY_SHAKE:
+		robot->body_shake();
+		break;
 
 	}
 
@@ -338,6 +342,7 @@ int main(int argc, char* argv[])
 	glutAddMenuEntry("SRK-punch", 3);
 	glutAddMenuEntry("RUN", 4);
 	glutAddMenuEntry("PUSH-UP", 5);
+	glutAddMenuEntry("Body-Shake", 10);
 	glutAttachMenu(GLUT_RIGHT_BUTTON);
 	glutCreateMenu(menuEvents);
 	glutAddSubMenu("action", ActionMenu);
@@ -415,6 +420,10 @@ void ActionMenuEvents(int option) {
 	case 5:
 		robot->initAction();
 		action = PUSHUP;
+		break;
+	case 10:
+		robot->initAction();
+		action = BODY_SHAKE;
 		break;
 	}
 }

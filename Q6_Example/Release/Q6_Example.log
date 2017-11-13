@@ -1,6 +1,88 @@
-﻿LINK : warning LNK4098: 預設的程式庫 'LIBCMTD' 與其他使用的程式庫衝突，請使用 /NODEFAULTLIB:library
+﻿  Robot.cpp
+Robot.cpp(83): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(88): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(95): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(100): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(114): warning C4305: '引數': 從 'double' 轉換為 'const float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(114): warning C4305: '引數': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(116): warning C4305: '引數': 從 'double' 轉換為 'const float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(116): warning C4305: '引數': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(124): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(136): warning C4305: '引數': 從 'double' 轉換為 'const float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(136): warning C4305: '引數': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(139): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(140): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(146): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(152): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(179): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(183): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(203): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(208): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(212): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(214): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(222): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(225): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(228): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(230): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(236): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(238): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(241): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(243): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(249): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(252): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(255): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(257): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(263): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(266): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(269): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(271): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(282): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(287): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(291): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(293): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(300): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(303): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(305): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(308): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(313): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(315): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(317): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(320): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(325): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(328): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(330): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(333): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(338): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(341): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(343): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(346): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(365): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(371): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(374): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(394): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(399): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(403): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(404): warning C4305: '引數': 從 'double' 轉換為 'const float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(404): warning C4305: '引數': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(414): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(418): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(422): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(423): warning C4305: '引數': 從 'double' 轉換為 'const float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(423): warning C4305: '引數': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(603): warning C4305: '-=': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(625): warning C4305: '+=': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(629): warning C4305: '+=': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(643): warning C4305: '-=': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(721): warning C4305: '+=': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(729): warning C4305: '-=': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(752): warning C4305: '-=': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(755): warning C4305: '-=': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+Robot.cpp(776): warning C4305: '+=': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+LINK : warning LNK4098: 預設的程式庫 'LIBCMTD' 與其他使用的程式庫衝突，請使用 /NODEFAULTLIB:library
   正在產生程式碼
-  All 259 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  4 of 260 functions ( 1.5%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
   已完成程式碼產生
 zlibd.lib(adler32.obj) : warning LNK4099: 找不到 PDB 'zlib.pdb' (有 'zlibd.lib(adler32.obj)' 或位於 'D:\GraphicsRobot\Release\zlib.pdb')，當做沒有偵錯資訊，連結物件
 zlibd.lib(crc32.obj) : warning LNK4099: 找不到 PDB 'zlib.pdb' (有 'zlibd.lib(crc32.obj)' 或位於 'D:\GraphicsRobot\Release\zlib.pdb')，當做沒有偵錯資訊，連結物件
