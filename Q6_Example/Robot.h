@@ -16,11 +16,14 @@ public:
 	void walk();
 	void clenchfist();
 	void SRK_punch();
+	void run();
+	void push_up();
 private:
 	int bodysize = 0;
 	float squat_length;
 	float jump_height;
 	float spin_angle;
+	float down_angle;
 	float right_bicep_xangle,left_bicep_xangle;
 	float right_arm_xangle, left_arm_xangle;
 	float right_big_legxangle, left_big_legxangle;
@@ -32,6 +35,7 @@ private:
 	bool fist;
 	bool knee_down;
 	bool jump;
+	bool do_push;
 	GLUquadric* qobj;
 	void drawBody();
 	void drawRightArm();

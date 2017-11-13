@@ -13,6 +13,8 @@
 #define WALK 1
 #define IDLE 0
 #define SRK_PUNCH 3
+#define RUN 4
+#define PUSHUP 5
 using namespace glm;
 
 mat4 Projection;
@@ -304,6 +306,13 @@ void timer(int value)
 	case SRK_PUNCH:
 		robot->SRK_punch();
 		break;
+	case RUN:
+		robot->run();
+		break;
+	case PUSHUP:
+		robot->push_up();
+		break;
+
 	}
 
 	glutTimerFunc(16, timer, 0);
@@ -327,6 +336,8 @@ int main(int argc, char* argv[])
 	glutAddMenuEntry("walk", 1);
 	glutAddMenuEntry("punch", 2);
 	glutAddMenuEntry("SRK-punch", 3);
+	glutAddMenuEntry("RUN", 4);
+	glutAddMenuEntry("PUSH-UP", 5);
 	glutAttachMenu(GLUT_RIGHT_BUTTON);
 	glutCreateMenu(menuEvents);
 	glutAddSubMenu("action", ActionMenu);
@@ -396,6 +407,14 @@ void ActionMenuEvents(int option) {
 	case 3:
 		robot->initAction();
 		action = SRK_PUNCH;
+		break;
+	case 4:
+		robot->initAction();
+		action = RUN;
+		break;
+	case 5:
+		robot->initAction();
+		action = PUSHUP;
 		break;
 	}
 }

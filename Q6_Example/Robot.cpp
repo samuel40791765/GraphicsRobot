@@ -9,6 +9,7 @@ Robot::Robot()
 	spin_angle = 0;
 	squat_length = 0;
 	jump_height = 0;
+	down_angle = 0;
 	right_bicep_xangle = 90;
 	left_bicep_xangle = 90;
 	right_arm_xangle = -30;
@@ -36,6 +37,7 @@ Robot::~Robot()
 void Robot::initAction()
 {
 	spin_angle = 0;
+	down_angle = 0;
 	squat_length = 0;
 	jump_height = 0;
 	right_bicep_xangle = 90;
@@ -55,6 +57,7 @@ void Robot::initAction()
 	armswing = true;
 	legwalk = false;
 	knee_down = true;
+	do_push = false;
 }
 
 void Robot::drawRobot()
@@ -64,6 +67,7 @@ void Robot::drawRobot()
 	glPushMatrix();	//push and pop whole body
 	glTranslatef(0, jump_height, 0);
 	glRotatef(spin_angle, 0, 1, 0);
+	glRotatef(down_angle, 1, 0, 0);
 
 	glPushMatrix();  //push and pop head, body, left and right hands
 	glTranslatef(0, squat_length, 0);
@@ -648,6 +652,76 @@ void Robot::SRK_punch()
 				spin_angle = 0;
 			}
 			
+		}
+
+	}
+}
+void Robot::run()
+{
+	if (right_bicep_xangle >= -90) {
+		right_bicep_xangle -= 20;
+		left_bicep_xangle -= 20;
+	}
+	if (armswing) {
+		if (right_bicep_xangle >= -120) {
+			right_bicep_xangle -= 4;
+			left_bicep_xangle -= 4;
+		}
+		if (right_arm_xangle >= -45) {
+			right_arm_xangle -= 4;
+			left_arm_xangle -= 4;
+		}
+		if (right_bicep_xangle <= -120 && right_arm_xangle <= -45)
+			armswing = false;
+	}
+	else {
+		if (right_bicep_xangle <= -90) {
+			right_bicep_xangle += 4;
+			left_bicep_xangle += 4;
+		}
+		if (right_arm_xangle <= -15) {
+			right_arm_xangle += 4;
+			left_arm_xangle += 4;
+		}
+		if (right_bicep_xangle >= -90 && right_arm_xangle >= -15)
+			armswing = true;
+	}
+	if (legwalk) {
+		if (right_big_legxangle > 60)
+			right_big_legxangle -= 5;
+		if (left_big_legxangle < 120)
+			left_big_legxangle += 5;
+		if (right_big_legxangle <= 60 || left_big_legxangle >= 120)
+			legwalk = false;
+	}
+	else {
+		if (left_big_legxangle > 60)
+			left_big_legxangle -= 5;
+		if (right_big_legxangle < 120)
+			right_big_legxangle += 5;
+		if (left_big_legxangle <= 60 || right_big_legxangle >= 120)
+			legwalk = true;
+	}
+}
+void Robot::push_up()
+{
+	if (down_angle < 75) {
+		down_angle += 2;
+	}
+	if (!do_push) {
+		if (down_angle < 85) {
+			down_angle += 0.3;
+		}
+		else if (down_angle >= 85) {
+			do_push = true;
+		}
+	}
+	else {
+		if (down_angle > 75) {
+			down_angle -= 0.3;
+		}
+		else if (down_angle <= 75) {
+			do_push = false;
 		}
 
 	}
