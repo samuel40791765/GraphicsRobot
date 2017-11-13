@@ -17,6 +17,9 @@ public:
 	void clenchfist();
 	void punch();
 	void SRK_punch();
+	void run();
+	void push_up();
+	void body_shake();
 	void shoot();
 private:
 	int bodysize = 0;
@@ -24,6 +27,9 @@ private:
 	float squat_length;
 	float jump_height;
 	float spin_angle;
+	float down_angle;
+	float ankle;
+	float front_length;
 	float right_bicep_xangle,left_bicep_xangle;
 	float right_arm_xangle, left_arm_xangle;
 	float right_arm_zangle, left_arm_zangle;
@@ -39,6 +45,7 @@ private:
 	bool fist;
 	bool knee_down;
 	bool jump;
+	bool do_push;
 	bool shooting,projectile;
 	bool punching;
 	bool punchonehand;

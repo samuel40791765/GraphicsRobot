@@ -9,6 +9,9 @@ Robot::Robot()
 	spin_angle = 0;
 	squat_length = 0;
 	jump_height = 0;
+	down_angle = 0;
+	ankle = 0;
+	front_length = 0;
 	right_bicep_xangle = 90;
 	left_bicep_xangle = 90;
 	right_arm_xangle = -30;
@@ -48,8 +51,11 @@ Robot::~Robot()
 void Robot::initAction()
 {
 	spin_angle = 0;
+	down_angle = 0;
 	squat_length = 0;
 	jump_height = 0;
+	ankle = 0;
+	front_length = 0;
 	right_bicep_xangle = 90;
 	left_bicep_xangle = 90;
 	right_arm_xangle = -30;
@@ -73,6 +79,7 @@ void Robot::initAction()
 	armswing = true;
 	legwalk = false;
 	knee_down = true;
+	do_push = false;
 	projectile = false;
 	shooting = true;
 	punching = true;
@@ -88,9 +95,11 @@ void Robot::drawRobot()
 	glPushMatrix();	//push and pop whole body
 	glTranslatef(0, jump_height, 0);
 	glRotatef(spin_angle, 0, 1, 0);
+	glRotatef(down_angle, 1, 0, 0);
 
 	glPushMatrix();  //push and pop head, body, left and right hands
 	glTranslatef(0, squat_length, 0);
+	glTranslatef(0, 0, front_length);
 
 	drawBody();
 
@@ -430,10 +439,12 @@ void Robot::drawRightLeg()
 	gluSphere(qobj, 0.2, 10, 10);
 	glRotatef(right_big_legxangle, 1, 0, 0);
 	gluCylinder(qobj, 0.1, 0.1, 0.7, 20, 20);
+	
 	glTranslatef(0, 0, 0.7);
+	glRotatef(ankle, 1, 0, 0);
 	Material::SetWhiteMaterial();
 	gluSphere(qobj, 0.2, 10, 10);
-	glTranslatef(-0.2, -0.2, -0.3);
+	glTranslatef(-0.2, -0.2, -0.4);
 	roundRect(Pnt3f(0.5, 0.7, 0.5), 0.7, 0.5, 0.05, 0.1);
 
 	glPopMatrix();
@@ -449,9 +460,10 @@ void Robot::drawLeftLeg()
 	glRotatef(left_big_legxangle, 1, 0, 0);
 	gluCylinder(qobj, 0.1, 0.1, 0.7, 20, 20);
 	glTranslatef(0, 0, 0.7);
+	glRotatef(ankle, 1, 0, 0);
 	Material::SetWhiteMaterial();
 	gluSphere(qobj, 0.2, 10, 10);
-	glTranslatef(-0.2, -0.2, -0.3);
+	glTranslatef(-0.2, -0.2, -0.4);
 	roundRect(Pnt3f(0.4, 0.7, 0.5), 0.7, 0.5, 0.05, 0.1);
 
 
@@ -727,6 +739,123 @@ void Robot::SRK_punch()
 
 	}
 }
+
+void Robot::run()
+{
+	if (right_bicep_xangle >= -90) {
+		right_bicep_xangle -= 20;
+		left_bicep_xangle -= 20;
+	}
+	if (armswing) {
+		if (right_bicep_xangle >= -120) {
+			right_bicep_xangle -= 4;
+			left_bicep_xangle -= 4;
+		}
+		if (right_arm_xangle >= -45) {
+			right_arm_xangle -= 4;
+			left_arm_xangle -= 4;
+		}
+		if (right_bicep_xangle <= -120 && right_arm_xangle <= -45)
+			armswing = false;
+	}
+	else {
+		if (right_bicep_xangle <= -90) {
+			right_bicep_xangle += 4;
+			left_bicep_xangle += 4;
+		}
+		if (right_arm_xangle <= -15) {
+			right_arm_xangle += 4;
+			left_arm_xangle += 4;
+		}
+		if (right_bicep_xangle >= -90 && right_arm_xangle >= -15)
+			armswing = true;
+	}
+	if (legwalk) {
+		if (right_big_legxangle > 60)
+			right_big_legxangle -= 5;
+		if (left_big_legxangle < 120)
+			left_big_legxangle += 5;
+		if (right_big_legxangle <= 60 || left_big_legxangle >= 120)
+			legwalk = false;
+	}
+	else {
+		if (left_big_legxangle > 60)
+			left_big_legxangle -= 5;
+		if (right_big_legxangle < 120)
+			right_big_legxangle += 5;
+		if (left_big_legxangle <= 60 || right_big_legxangle >= 120)
+			legwalk = true;
+	}
+}
+void Robot::push_up()
+{
+	if (down_angle < 75) {
+		down_angle += 2;
+	}
+	if (!do_push) {
+		if (down_angle < 85) {
+			down_angle += 0.3;
+		}
+		else if (down_angle >= 85) {
+			do_push = true;
+		}
+	}
+	else {
+		if (down_angle > 75) {
+			down_angle -= 0.3;
+		}
+		else if (down_angle <= 75) {
+			do_push = false;
+		}
+
+	}
+}
+void Robot::body_shake()
+{
+	if (armswing) {
+		if (right_bicep_xangle >= 10) {
+			right_bicep_xangle -= 4;
+			left_bicep_xangle -= 4;
+		}
+		if (right_arm_xangle >= -45) {
+			right_arm_xangle -= 4;
+			left_arm_xangle -= 4;
+		}
+		if (ankle >= 0) {
+			ankle -= 4;
+		}
+		if (jump_height >= 0) {
+			jump_height -= 0.1;
+		}
+		if (front_length >= 0) {
+			front_length -= 0.1;
+		}
+		if (right_bicep_xangle <= 10 && right_arm_xangle <= -45 && ankle <= 0 && jump_height <= 0.0 && front_length <= 0.1)
+			armswing = false;
+	}
+	else {
+		if (right_bicep_xangle <= 100) {
+			right_bicep_xangle += 8;
+			left_bicep_xangle += 8;
+		}
+		if (right_arm_xangle <= -15) {
+			right_arm_xangle += 4;
+			left_arm_xangle += 4;
+		}
+		if (ankle <= 50) {
+			ankle += 16;
+		}
+		if (jump_height <= 0.4) {
+			jump_height += 0.25;
+		}
+		if (front_length <= 0.2) {
+			front_length += 0.1;
+		}
+		if (right_bicep_xangle >= 100 && right_arm_xangle >= -15 && ankle >= 50 && jump_height >= 0.4 && front_length >= 0.2)
+			armswing = true;
+	}
+}
+
 void Robot::shoot() {
 	if (shooting) {
 		if (right_bicep_xangle >= 3) {
@@ -871,3 +1000,4 @@ void Robot::punch() {
 			punching = true;
 	}
 }
+

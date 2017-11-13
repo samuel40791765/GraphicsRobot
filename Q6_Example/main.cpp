@@ -9,12 +9,17 @@
 #include <vector>
 #include "TextureApp.h"
 #define INITACTION -1
-#define WARMUP 5
-#define SHOOT 4
-#define SRK_PUNCH 3
-#define PUNCH 2
-#define WALK 1
 #define IDLE 0
+#define WALK 1
+#define RUN 2
+#define WARMUP 3
+#define PUSHUP 4
+#define BODY_SHAKE 5
+#define PUNCH 6
+#define SRK_PUNCH 7
+#define SHOOT 8
+
+
 
 using namespace glm;
 
@@ -310,9 +315,19 @@ void timer(int value)
 	case SRK_PUNCH:
 		robot->SRK_punch();
 		break;
+	case RUN:
+		robot->run();
+		break;
+	case PUSHUP:
+		robot->push_up();
+		break;
+	case BODY_SHAKE:
+		robot->body_shake();
+		break;
 	case SHOOT:
 		robot->shoot();
 		break;
+
 	}
 
 	glutTimerFunc(16, timer, 0);
@@ -334,10 +349,15 @@ int main(int argc, char* argv[])
 	glutAddMenuEntry("init action", -1);
 	glutAddMenuEntry("idle", 0);
 	glutAddMenuEntry("walk", 1);
-	glutAddMenuEntry("punch", 2);
-	glutAddMenuEntry("SRK-punch", 3);
-	glutAddMenuEntry("Shoot", 4);
-	glutAddMenuEntry("Warm Up", 5);
+	glutAddMenuEntry("RUN", 2);
+	glutAddMenuEntry("Warm Up", 3);
+	glutAddMenuEntry("PUSH-UP", 4);
+	glutAddMenuEntry("Body-Shake", 5);
+	glutAddMenuEntry("punch", 6);
+	glutAddMenuEntry("SRK-punch", 7);
+	glutAddMenuEntry("Shoot", 8);
+
+
 	glutAttachMenu(GLUT_RIGHT_BUTTON);
 	glutCreateMenu(menuEvents);
 	glutAddSubMenu("action", ActionMenu);
@@ -404,20 +424,33 @@ void ActionMenuEvents(int option) {
 		break;
 	case 2:
 		robot->initAction();
-		action = PUNCH;
+		action = RUN;
 		break;
 	case 3:
 		robot->initAction();
-		action = SRK_PUNCH;
+		action = WARMUP;
 		break;
 	case 4:
 		robot->initAction();
-		action = SHOOT;
+		action = PUSHUP;
 		break;
 	case 5:
 		robot->initAction();
-		action = WARMUP;
+		action = BODY_SHAKE;
 		break;
+	case 6:
+		robot->initAction();
+		action = PUNCH;
+		break;
+	case 7:
+		robot->initAction();
+		action = SRK_PUNCH;
+		break;
+	case 8:
+		robot->initAction();
+		action = SHOOT;
+		break;
+	
 	}
 }
 void ChangeSize(int w, int h) {
