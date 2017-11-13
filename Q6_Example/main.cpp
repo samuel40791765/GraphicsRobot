@@ -9,10 +9,13 @@
 #include <vector>
 #include "TextureApp.h"
 #define INITACTION -1
+#define WARMUP 5
+#define SHOOT 4
+#define SRK_PUNCH 3
 #define PUNCH 2
 #define WALK 1
 #define IDLE 0
-#define SRK_PUNCH 3
+
 using namespace glm;
 
 mat4 Projection;
@@ -299,10 +302,16 @@ void timer(int value)
 		robot->walk();
 		break;
 	case PUNCH:
+		robot->punch();
+		break;
+	case WARMUP:
 		robot->clenchfist();
 		break;
 	case SRK_PUNCH:
 		robot->SRK_punch();
+		break;
+	case SHOOT:
+		robot->shoot();
 		break;
 	}
 
@@ -327,6 +336,8 @@ int main(int argc, char* argv[])
 	glutAddMenuEntry("walk", 1);
 	glutAddMenuEntry("punch", 2);
 	glutAddMenuEntry("SRK-punch", 3);
+	glutAddMenuEntry("Shoot", 4);
+	glutAddMenuEntry("Warm Up", 5);
 	glutAttachMenu(GLUT_RIGHT_BUTTON);
 	glutCreateMenu(menuEvents);
 	glutAddSubMenu("action", ActionMenu);
@@ -388,14 +399,24 @@ void ActionMenuEvents(int option) {
 		action = IDLE;
 		break;
 	case 1:
+		robot->initAction();
 		action = WALK;
 		break;
 	case 2:
+		robot->initAction();
 		action = PUNCH;
 		break;
 	case 3:
 		robot->initAction();
 		action = SRK_PUNCH;
+		break;
+	case 4:
+		robot->initAction();
+		action = SHOOT;
+		break;
+	case 5:
+		robot->initAction();
+		action = WARMUP;
 		break;
 	}
 }
@@ -435,4 +456,3 @@ void Mousemove(int x, int y)
 
 
 void menuEvents(int option) {};
-void ModeMenuEvents(int option);
