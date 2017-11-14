@@ -254,7 +254,7 @@ void display()
 
 	glShadeModel(GL_SMOOTH);
 	glEnable(GL_BLEND);
-	drawSkybox(100);
+	drawSkybox(1000);
 	glPushMatrix();
 	glTranslatef(0, -1.5, -15);
 	glRotatef(angle, 0, 1, 0);
