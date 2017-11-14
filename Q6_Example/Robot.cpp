@@ -789,14 +789,40 @@ void Robot::run()
 }
 void Robot::push_up()
 {
+	if (right_finger_angle > -110)
+		right_finger_angle--;
+	if (right_knuckle_angle > -70)
+		right_knuckle_angle--;
+	if (right_thumb_angle < 60)
+		right_thumb_angle++;
+
+	if (left_finger_angle < 110)
+		left_finger_angle++;
+	if (left_knuckle_angle < 70)
+		left_knuckle_angle++;
+	if (left_thumb_angle > -60)
+		left_thumb_angle--;
 	if (down_angle < 75) {
 		down_angle += 2;
+	}
+	if (right_bicep_xangle <= 90) {
+		right_bicep_xangle += 3;
+		left_bicep_xangle += 3;
 	}
 	if (!do_push) {
 		if (down_angle < 85) {
 			down_angle += 0.3;
 		}
-		else if (down_angle >= 85) {
+		if (right_bicep_xangle <= 110) {
+			right_bicep_xangle += 0.5;
+			left_bicep_xangle += 0.5;
+		}
+		
+		if (right_arm_xangle >= -120) {
+			right_arm_xangle -= 1;
+			left_arm_xangle -= 1;
+		}
+		if (down_angle >= 85 && right_arm_xangle <= -120 && right_bicep_xangle >= 100) {
 			do_push = true;
 		}
 	}
@@ -804,7 +830,15 @@ void Robot::push_up()
 		if (down_angle > 75) {
 			down_angle -= 0.3;
 		}
-		else if (down_angle <= 75) {
+		if (right_bicep_xangle >= 90) {
+			right_bicep_xangle -= 0.5;
+			left_bicep_xangle -= 0.5;
+		}
+		if (right_arm_xangle <= -90) {
+			right_arm_xangle += 1;
+			left_arm_xangle += 1;
+		}
+		if (down_angle <= 75 && right_arm_xangle >= -90 && right_bicep_xangle <= 90) {
 			do_push = false;
 		}
 
