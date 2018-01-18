@@ -34,6 +34,7 @@ public:
 	void flail();
 	void jumpup();
 	void swim();
+	void jack();
 private:
 	int bodysize = 0;
 	int shoot_count = 0;
@@ -48,6 +49,7 @@ private:
 	float right_leg, left_leg;
 	float right_bicep_xangle,left_bicep_xangle;
 	float right_bicep_yangle,left_bicep_yangle;
+	float right_bicep_zangle, left_bicep_zangle;
 	float right_arm_xangle, left_arm_xangle;
 	float right_arm_yangle, left_arm_yangle;
 	float right_arm_zangle, left_arm_zangle;

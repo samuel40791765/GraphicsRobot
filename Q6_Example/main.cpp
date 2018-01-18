@@ -31,6 +31,7 @@
 #define SWIM 17
 #define EXTENDANDGRAB 18
 #define FLAIL 19
+#define JACK 20
 
 using namespace glm;
 
@@ -372,6 +373,9 @@ void timer(int value)
 	case FLAIL:
 		robot->flail();
 		break;
+	case JACK:
+		robot->jack();
+		break;
 	}
 
 	glutTimerFunc(16, timer, 0);
@@ -412,7 +416,8 @@ int main(int argc, char* argv[])
 	glutAddMenuEntry("jump", 16);
 	glutAddMenuEntry("swim", 17);
 	glutAddMenuEntry("extend and grab", 18);
-	glutAddMenuEntry("flail", 19);
+	glutAddMenuEntry("SOS", 19);
+	glutAddMenuEntry("jumping jack", 20);
 
 	glutAttachMenu(GLUT_RIGHT_BUTTON);
 	glutCreateMenu(menuEvents);
@@ -549,6 +554,10 @@ void ActionMenuEvents(int option) {
 	case 19:
 		robot->initAction();
 		action = FLAIL;
+		break;
+	case 20:
+		robot->initAction();
+		action = JACK;
 		break;
 	}
 }
