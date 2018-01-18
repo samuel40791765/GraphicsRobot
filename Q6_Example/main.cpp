@@ -19,7 +19,18 @@
 #define SRK_PUNCH 7
 #define SHOOT 8
 
-
+//New stuff
+#define HEADSPIN 9
+#define WAVE 10
+#define YAY 11
+#define PRAY 12
+#define SPINKICK 13
+#define ARMEXTEND 14
+#define LEGEXTEND 15
+#define JUMP 16
+#define SWIM 17
+#define EXTENDANDGRAB 18
+#define FLAIL 19
 
 using namespace glm;
 
@@ -327,7 +338,40 @@ void timer(int value)
 	case SHOOT:
 		robot->shoot();
 		break;
+	case SPINKICK:
+		robot->spinkick();
+		break;
+	case YAY:
+		robot->yay();
+		break;
+	case PRAY:
+		robot->pray();
+		break;
+	case ARMEXTEND:
+		robot->armextend();
+		break;
+	case WAVE:
+		robot->wave();
+		break;
+	case HEADSPIN:
+		robot->headspin();
+		break;
 
+	case LEGEXTEND:
+		robot->legextend();
+		break;
+	case JUMP:
+		robot->jumpup();
+		break;
+	case SWIM:
+		robot->swim();
+		break;
+	case EXTENDANDGRAB:
+		robot->extendandgrab();
+		break;
+	case FLAIL:
+		robot->flail();
+		break;
 	}
 
 	glutTimerFunc(16, timer, 0);
@@ -356,7 +400,19 @@ int main(int argc, char* argv[])
 	glutAddMenuEntry("punch", 6);
 	glutAddMenuEntry("SRK-punch", 7);
 	glutAddMenuEntry("Shoot", 8);
+	//new stuff
+	glutAddMenuEntry("Headspin", 9);
+	glutAddMenuEntry("wave", 10);
+	glutAddMenuEntry("yay", 11);
+	glutAddMenuEntry("pray", 12);
+	glutAddMenuEntry("spin kick", 13);
+	glutAddMenuEntry("arm extend", 14);
 
+	glutAddMenuEntry("leg extend", 15);
+	glutAddMenuEntry("jump", 16);
+	glutAddMenuEntry("swim", 17);
+	glutAddMenuEntry("extend and grab", 18);
+	glutAddMenuEntry("flail", 19);
 
 	glutAttachMenu(GLUT_RIGHT_BUTTON);
 	glutCreateMenu(menuEvents);
@@ -450,7 +506,50 @@ void ActionMenuEvents(int option) {
 		robot->initAction();
 		action = SHOOT;
 		break;
-	
+	case 9:
+		robot->initAction();
+		action = HEADSPIN;
+		break;
+	case 10:
+		robot->initAction();
+		action = WAVE;
+		break;
+	case 11:
+		robot->initAction();
+		action = YAY;
+		break;
+	case 12:
+		robot->initAction();
+		action = PRAY;
+		break;
+	case 13:
+		robot->initAction();
+		action = SPINKICK;
+		break;
+	case 14:
+		robot->initAction();
+		action = ARMEXTEND;
+		break;
+	case 15:
+		robot->initAction();
+		action = LEGEXTEND;
+		break;
+	case 16:
+		robot->initAction();
+		action = JUMP;
+		break;
+	case 17:
+		robot->initAction();
+		action = SWIM;
+		break;
+	case 18:
+		robot->initAction();
+		action = EXTENDANDGRAB;
+		break;
+	case 19:
+		robot->initAction();
+		action = FLAIL;
+		break;
 	}
 }
 void ChangeSize(int w, int h) {

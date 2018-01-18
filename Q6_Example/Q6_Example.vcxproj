@@ -69,8 +69,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>E:\GraphicsRobot\SDL2-2.0.7\include;../freeglut-3.0.0/include;$(IncludePath)</IncludePath>
-    <LibraryPath>E:\GraphicsRobot\SDL2-2.0.7\lib;../freeglut-3.0.0/lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>../include;../freeglut-3.0.0/include;$(IncludePath)</IncludePath>
+    <LibraryPath>../lib;../freeglut-3.0.0/lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IncludePath>../;../freeglut-3.0.0/include;$(IncludePath)</IncludePath>
@@ -83,7 +83,7 @@
       <SDLCheck>true</SDLCheck>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>freeglutd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>freeglut.lib;zlibd.lib;libpng16d.lib;opencv_core2413d.lib;opencv_highgui2413d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

@@ -21,6 +21,19 @@ public:
 	void push_up();
 	void body_shake();
 	void shoot();
+
+	//new stuff
+	void spinkick();
+	void yay();
+	void pray();
+	void armextend();
+	void wave();
+	void headspin();
+	void legextend();
+	void extendandgrab();
+	void flail();
+	void jumpup();
+	void swim();
 private:
 	int bodysize = 0;
 	int shoot_count = 0;
@@ -30,8 +43,13 @@ private:
 	float down_angle;
 	float ankle;
 	float front_length;
+	float head_rotate;
+	float right_arm, left_arm;
+	float right_leg, left_leg;
 	float right_bicep_xangle,left_bicep_xangle;
+	float right_bicep_yangle,left_bicep_yangle;
 	float right_arm_xangle, left_arm_xangle;
+	float right_arm_yangle, left_arm_yangle;
 	float right_arm_zangle, left_arm_zangle;
 	float right_big_legxangle, left_big_legxangle;
 	float right_small_legxangle, left_small_legxangle;

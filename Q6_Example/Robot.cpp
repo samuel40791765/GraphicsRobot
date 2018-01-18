@@ -12,12 +12,19 @@ Robot::Robot()
 	down_angle = 0;
 	ankle = 0;
 	front_length = 0;
+	
 	right_bicep_xangle = 90;
 	left_bicep_xangle = 90;
+	right_bicep_yangle = 0;
+	left_bicep_yangle = 0;
 	right_arm_xangle = -30;
 	left_arm_xangle = -30;
 	right_arm_zangle = 0;
 	left_arm_zangle = 0;
+	right_arm = 1;
+	left_arm = 1;
+	right_leg = 0.7;
+	left_leg = 0.7;
 	right_big_legxangle = 90;
 	left_big_legxangle = 90;
 	right_small_legxangle = 0;
@@ -32,6 +39,7 @@ Robot::Robot()
 	left_wrist_angle = 0;
 	right_wrist_offset = 0;
 	left_wrist_offset = 0;
+	head_rotate = 0;
 	armswing = true;
 	legwalk = false;
 	knee_down = true;
@@ -50,16 +58,25 @@ Robot::~Robot()
 
 void Robot::initAction()
 {
+	head_rotate = 0;
 	spin_angle = 0;
 	down_angle = 0;
 	squat_length = 0;
 	jump_height = 0;
 	ankle = 0;
 	front_length = 0;
+	right_arm = 1;
+	left_arm = 1;
+	right_leg = 0.7;
+	left_leg = 0.7;
 	right_bicep_xangle = 90;
 	left_bicep_xangle = 90;
+	right_bicep_yangle = 0;
+	left_bicep_yangle = 0;
 	right_arm_xangle = -30;
 	left_arm_xangle = -30;
+	left_arm_yangle = 0;
+	right_arm_yangle = 0;
 	right_arm_zangle = 0;
 	left_arm_zangle = 0;
 	right_big_legxangle = 90;
@@ -133,7 +150,7 @@ void Robot::drawBody()
 
 	glPushMatrix();
 	//glRotatef(angle, 0, 1, 0);
-	glRotatef(0, 1, 0, 0);
+	
 	Material::SetWhiteMaterial();
 	roundRect(Pnt3f(0.85, 1.8, 0.85), 1.7, 1.7, 1.7, 0.3);
 	Material::SetBlackMaterial();
@@ -157,6 +174,7 @@ void Robot::drawBody()
 	//glRotatef(-70, 1, 0, 0);
 	Material::SetWhiteMaterial();
 	//gluCylinder(qobj, 0.1, 0.1, 2.5, 4, 4);
+	glRotatef(head_rotate, 0, 1, 0);
 	roundRect(Pnt3f(0.5, 2.7, 0.5), 0.2, 1, 1, 0.5);
 
 	Material::SetBlackMaterial();
@@ -167,12 +185,14 @@ void Robot::drawBody()
 
 	Material::SetCyanMaterial();
 	glPushMatrix();
+	glRotatef(head_rotate, 0, 1, 0);
 	glTranslatef(-0.3, 2.6, 1.13);
 	glScalef(1, 1.75, 1);
 	gluSphere(qobj, 0.1, 30, 30);
 	glPopMatrix();
 
 	glPushMatrix();
+	glRotatef(head_rotate, 0, 1, 0);
 	glTranslatef(0.3, 2.6, 1.13);
 	glScalef(1, 1.75, 1);
 	gluSphere(qobj, 0.1, 30, 30);
@@ -185,6 +205,7 @@ void Robot::drawRightArm()
 {
 
 	glRotatef(right_bicep_xangle, 1, 0, 0);
+	glRotatef(right_bicep_yangle, 0, 1, 0);
 	glPushMatrix();
 	Material::SetWhiteMaterial();
 	glPushMatrix();
@@ -193,12 +214,13 @@ void Robot::drawRightArm()
 	glPopMatrix();
 	glRotatef(15, 0, 1, 0);
 	Material::SetBlackMaterial();
-	gluCylinder(qobj, 0.1, 0.1, 1, 20, 20);
-	glTranslatef(0, 0, 1);
+	gluCylinder(qobj, 0.1, 0.1, right_arm, 20, 20);
+	glTranslatef(0, 0, right_arm);
 	Material::SetWhiteMaterial();
 	gluSphere(qobj, 0.2, 10, 10);
 	glRotatef(-15, 0, 1, 0);
 	glRotatef(right_arm_xangle, 1, 0, 0);
+	glRotatef(right_arm_yangle, 0, 1, 0);
 	glRotatef(right_arm_zangle, 0, 0, 1);
 	glPushMatrix();
 	glScalef(1, 1.3, 1);
@@ -394,6 +416,7 @@ void Robot::drawLeftHand()
 void Robot::drawLeftArm()
 {
 	glRotatef(left_bicep_xangle, 1, 0, 0);
+	glRotatef(left_bicep_yangle, 0, 1, 0);
 	glPushMatrix();
 	Material::SetWhiteMaterial();
 	glPushMatrix();
@@ -402,12 +425,13 @@ void Robot::drawLeftArm()
 	glPopMatrix();
 	glRotatef(-15, 0, 1, 0);
 	Material::SetBlackMaterial();
-	gluCylinder(qobj, 0.1, 0.1, 1, 20, 20);
-	glTranslatef(0, 0, 1);
+	gluCylinder(qobj, 0.1, 0.1, left_arm, 20, 20);
+	glTranslatef(0, 0, left_arm);
 	Material::SetWhiteMaterial();
 	gluSphere(qobj, 0.2, 10, 10);
 	glRotatef(15, 0, 1, 0);
 	glRotatef(left_arm_xangle, 1, 0, 0);
+	glRotatef(left_arm_yangle, 0, 1, 0);
 	glRotatef(left_arm_zangle, 0, 0, 1);
 	glPushMatrix();
 	glScalef(1, 1.3, 1);
@@ -438,9 +462,9 @@ void Robot::drawRightLeg()
 	glScalef(1, 1.3, 1);
 	gluSphere(qobj, 0.2, 10, 10);
 	glRotatef(right_big_legxangle, 1, 0, 0);
-	gluCylinder(qobj, 0.1, 0.1, 0.7, 20, 20);
+	gluCylinder(qobj, 0.1, 0.1, right_leg, 20, 20);
 	
-	glTranslatef(0, 0, 0.7);
+	glTranslatef(0, 0, right_leg);
 	glRotatef(ankle, 1, 0, 0);
 	Material::SetWhiteMaterial();
 	gluSphere(qobj, 0.2, 10, 10);
@@ -458,8 +482,8 @@ void Robot::drawLeftLeg()
 	glScalef(1, 1.3, 1);
 	gluSphere(qobj, 0.2, 10, 10);
 	glRotatef(left_big_legxangle, 1, 0, 0);
-	gluCylinder(qobj, 0.1, 0.1, 0.7, 20, 20);
-	glTranslatef(0, 0, 0.7);
+	gluCylinder(qobj, 0.1, 0.1, left_leg, 20, 20);
+	glTranslatef(0, 0, left_leg);
 	glRotatef(ankle, 1, 0, 0);
 	Material::SetWhiteMaterial();
 	gluSphere(qobj, 0.2, 10, 10);
@@ -1035,3 +1059,185 @@ void Robot::punch() {
 	}
 }
 
+void Robot::spinkick() {
+
+}
+void Robot::yay() {
+	right_bicep_xangle += 20;
+	left_bicep_xangle += 20;
+	if (right_bicep_xangle >= 360)
+		right_bicep_xangle -= 360;
+	if (left_bicep_xangle >= 360)
+		left_bicep_xangle -= 360;
+}
+void Robot::pray() {
+	if (squat_length > -0.5) {
+		squat_length -= 0.05;
+	}
+	if (right_bicep_xangle >= 60) {
+		right_bicep_xangle -= 8;
+		left_bicep_xangle -= 8;
+	}
+	if (right_bicep_yangle >= -10) {
+		right_bicep_yangle -= 5;
+		left_bicep_yangle += 5;
+	}
+	if (right_arm_yangle >= -30) {
+		right_arm_yangle -= 5;
+		left_arm_yangle += 5;
+	}
+	if (right_arm_yangle <= -30) {
+		if (armswing) {
+			if (right_bicep_xangle >= -15) {
+				right_bicep_xangle -= 5;
+				left_bicep_xangle -= 5;
+			}
+			if (right_bicep_xangle <= -15)
+				armswing = false;
+		}
+		else {
+			if (right_bicep_xangle <= 15) {
+				right_bicep_xangle += 5;
+				left_bicep_xangle += 5;
+			}
+			if (right_bicep_xangle >= 15)
+				armswing = true;
+		}
+	}
+}
+void Robot::armextend() {
+	if (left_arm_xangle <= 0) {
+		left_arm_xangle += 5;
+		right_arm_xangle += 5;
+	}
+	if (right_bicep_xangle > 10) {
+		right_bicep_xangle -= 5;
+		left_bicep_xangle -= 5;
+	}
+	if (right_bicep_xangle <= 10) {
+		if (armswing) {
+			if (right_arm <= 3.5) {
+				right_arm += 0.1;
+				left_arm += 0.1;
+			}
+			if (right_arm >= 3.5)
+				armswing = false;
+		}
+		else {
+			if (right_arm >= 1) {
+				right_arm -= 0.1;
+				left_arm -= 0.1;
+			}
+			if (right_arm <=1)
+				armswing = true;
+		}
+	}
+}
+void Robot::wave() {
+	if (right_bicep_xangle >= -80) {
+		right_bicep_xangle -= 10;
+		right_arm_zangle += 5;
+	}
+	if (right_arm_xangle < 0)
+		right_arm_xangle += 10;
+
+	if (right_bicep_xangle <= -80) {
+		if (armswing) {
+			if (right_arm_yangle >= -30)
+				right_arm_yangle -= 5;
+			if (right_arm_yangle <= -30)
+				armswing = false;
+		}
+		else {
+			if (right_arm_yangle <= 30)
+				right_arm_yangle += 5;
+			if (right_arm_yangle >= 30)
+				armswing = true;
+		}
+	}
+
+}
+void Robot::headspin() {
+	head_rotate += 10;
+	if (head_rotate > 360)
+		head_rotate -= 360;;
+}
+
+void Robot::legextend() {
+	if (armswing) {
+		if (right_leg <= 2.5) {
+			right_leg += 0.1;
+			left_leg += 0.1;
+			jump_height += 0.12;
+		}
+		if (right_leg >= 2.5)
+			armswing = false;
+	}
+	else {
+		if (right_leg >= 0.7) {
+			right_leg -= 0.1;
+			left_leg -= 0.1;
+			jump_height -= 0.12;
+		}
+		if (right_leg <= 1)
+			armswing = true;
+	}
+}
+void  Robot::extendandgrab() {
+	if (right_bicep_xangle > 10) {
+		right_bicep_xangle -= 5;
+	}
+	if (right_arm_xangle <= 0) {
+		right_arm_xangle += 5;
+	}
+
+	if (right_bicep_xangle <= 10) {
+		if (armswing) {
+			if (right_arm <= 3.5) {
+				right_arm += 0.1;
+			}
+			if (right_arm >= 3.5)
+				punchonehand = true;
+
+			if (punchonehand) {
+				if (right_finger_angle > -110)
+					right_finger_angle-=3;
+				if (right_knuckle_angle > -70)
+					right_knuckle_angle-=3;
+				if (right_thumb_angle < 60)
+					right_thumb_angle+=3;
+				if (right_finger_angle <= -110)
+					armswing = false;
+			}
+		}
+		else {
+			if (!punchonehand) {
+				if (right_finger_angle < -20)
+					right_finger_angle+=3;
+				if (right_knuckle_angle < 0)
+					right_knuckle_angle+=3;
+				if (right_thumb_angle > 0)
+					right_thumb_angle-=3;
+
+				if (right_finger_angle >= -20)
+					armswing = true;
+			}
+			if (punchonehand) {
+				if (right_arm >= 1) {
+					right_arm -= 0.1;
+				}
+				if (right_arm <= 1)
+					punchonehand = false;
+			}
+		}
+	}
+}
+void  Robot::flail() {
+
+}
+void  Robot::jumpup() {
+
+}
+void  Robot::swim() {
+
+}
