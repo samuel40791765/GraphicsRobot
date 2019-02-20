@@ -28,7 +28,6 @@ Extending and grabbing 18
 Flailing 19
 Tube motion 20
 
-
 Images:
 ![alt text](https://raw.githubusercontent.com/samuel40791765/GraphicsRobot/master/projectimages/pic1.png)
 ![alt text](https://raw.githubusercontent.com/samuel40791765/GraphicsRobot/master/projectimages/pic2.png)
